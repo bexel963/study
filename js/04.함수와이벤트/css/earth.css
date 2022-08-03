@@ -1,0 +1,19 @@
+body{
+    font-size: 10px;
+}
+#pannel{
+    width: 600px;
+    height: 500px;
+    border: 1px solid #999;
+    position: relative;
+}
+#earth{
+    position: absolute;
+    width: 80px;
+    left: 50px;
+    top: 120px;
+}
+#nav{
+    text-align: center;
+    width: 600px;
+}

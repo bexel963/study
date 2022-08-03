@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공배수인지 알려주는거</title>
+</head>
+<body>
+    
+    <script>
+        var inputNum = window.prompt("숫자를 입력하세요.");
+        alert(typeof(inputNum) + "타입");
+        // prompt() 에서 받은 값은 String이라서 number타입으로 바꿔줘야한다.
+        inputNum = parseInt(inputNum);
+        alert(typeof(inputNum) + "로 타입 변환");
+
+        if((inputNum%2==0) && (inputNum%3==0)){
+            alert("입력하신 숫자는 2와 3의 공배수 입니다.");
+        }else{
+            alert("입력하신 숫자는 2와 3의 공배수가 아닙니다.");
+        }
+    </script>
+</body>
+</html>

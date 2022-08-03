@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 생명 주기</title>
+</head>
+<body>
+    
+    <script>
+        function localTest(){
+            var value = "임재형";
+            document.write("1. value = " + value);
+        }
+        localTest();
+        // 지역 변수는 함수가 끝나면 사라진다.
+        document.write("2. value = " + value);  
+    </script>
+</body>
+</html>

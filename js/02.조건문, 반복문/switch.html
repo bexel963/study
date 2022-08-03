@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var rank = window.prompt("직급을 입력하세요. 1-부장, 2-차장, 3-과장, 4-대리, 5-사원");
+        rank = parseInt(rank);
+
+        // switch문은 정형화, 한정도니 데이터에 가독성을 좋게 하고자 한다면 switch문을 쓸 것을 고려해도 좋다.
+        switch(rank) {
+            case 1:
+                document.write("<p>부장의 급여는 <strong>700만원</strong> 입니다.</p>");
+                break;
+            case 2:
+                document.write("<p>차장의 급여는 <strong>600만원</strong> 입니다.</p>");
+                break;
+            case 3:
+                document.write("<p>과장의 급여는 <strong>500만원</strong> 입니다.</p>");
+            break;
+            case 4:
+                document.write("<p>대리의 급여는 <strong>400만원</strong> 입니다.</p>");
+                break;
+            case 5:
+                document.write("<p>사원의 급여는 <strong>300만원</strong> 입니다.</p>");
+                break;
+            default:
+                alert("잘못 입력하셨습니다.");
+        }
+    </script>
+</body>
+</html>

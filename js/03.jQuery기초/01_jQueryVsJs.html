@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN방식 - 인터넷이 연결이 되어있는 곳에서만 아래 코드가 적용된다. -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="menu" id="menu1">
+        <li>menu1-1</li>
+        <li>menu1-2</li>
+        <li>menu1-3</li>
+        <li>menu1-4</li>
+        <li>menu1-5</li>
+        <li>menu1-6</li>
+        <li>menu1-7</li>
+    </div>
+    <div class="menu" id="menu2">
+        <li>menu2-1</li>
+        <li>menu2-2</li>
+        <li>menu2-3</li>
+        <li>menu2-4</li>
+        <li>menu2-5</li>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var menu2 = document.getElementById("menu2");
+            var liList = menu2.getElementsByTagName("li");
+            for(var i=0 ; i<liList.length ; i++){
+                var li = liList[i];
+                li.style.color = "#f00";
+            }
+            // 1. 먼저 아이디 선택자가 menu2인 것을 찾는다.
+            // 2. 찾은 요소는 하위 요소로 li태그들을 배열로 저장하고 있다.
+            // 3. li태그를 하나씩 접근해서 일일히 글자색을 변경해준다.
+        }
+
+        $(document).ready(function(){
+            $("#menu1 li").css("color", "blue");
+            // 위의 3단계로 한 작업이 한 줄로 끝난다.
+        })
+    </script>
+</body>
+</html>

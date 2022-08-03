@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<body>
+    
+    <script>
+        var userId = window.prompt("아이디를 입력하세요.");
+        var userPwd = window.prompt("비밀번호를 입력하세요.")
+        // CPU의 참조를(부하를) 가장 적게 받으려고 한다면, if-else 구문을 사용하는 것이 좋다.
+        if(userId == "asdf" && userPwd == "1234"){
+            alert(userId + "님이 로그인 하셨습니다.");
+        }else if(userId == "asdf"){
+            alert("비밀번호가 틀렸습니다.");
+        }else{
+            alert("아이디가 틀렸습니다.");
+        }
+
+    </script>
+</body>
+</html>

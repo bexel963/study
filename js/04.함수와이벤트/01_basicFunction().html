@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        // 기본 함수.
+        function hello() {
+            document.write("반갑습니다. <br/>");
+        }
+        hello();
+        hello();
+        hello();
+
+        // 매개변수만 있는 함수.
+        function callName(name, cnt){
+            var i = 0;
+            while(i++<cnt){
+                document.write(i + ". " + name + "<br/>");
+            }
+        }
+
+        // 매개변수, 리턴값 있는 함수
+        function add(num1, num2){
+            var result = num1 + num2;
+            return result;
+        }
+        
+        callName("임재형", 3);
+        callName("신사임당", 5);
+        var value = add(10, 20);
+        document.write("두 수의 합 : " + value);
+
+        
+    </script>
+</body>
+</html>
