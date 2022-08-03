@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="btn">이벤트</button>
+    <button id="btn2">그룹 이벤트</button>
+    <button id="btn3">다른 방법</button>
+    <button id="btn4">또 다른 방법</button>
+
+    <script>
+        $(document).ready(function(){
+            // 버튼에 단독 이벤트 등록
+            $("#btn").click(function(){
+                console.log("이벤트 발생");
+            });
+
+            // 1번째 방법 - 버튼에 그룹 이벤트 등록(on() 을 이용한다.)
+            $("#btn2").on("mouseover focus", function(){
+                console.log("그룹 이벤트 발생");
+            })
+            
+            // 2번째 방법
+            $("#btn3").on({
+                "mouseover focus" : function(){
+                    console.log("다른 방법으로 이벤트 발생");
+                }
+            });
+
+            // 3번째 방법
+            $("#btn4").on({
+                "mouseover" : function(){
+                    console.log("또 다른 방법");
+                },
+                "focus" : function(){
+                    console.log("또 다른 방법");
+                }
+            });
+        })
+    </script>
+</body>
+</html>

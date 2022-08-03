@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <p>
+        <!-- 외부에 있는 연동 소스 -->
+        <img src="https://blog.daum.net/5281265/14" class="img">
+    </p>
+    <script>
+    // ready(), load()
+    // ready() : 이벤트는 클라이언트가 사이트를 방문할 때 요청한 HTML문서 객체의 로딩이 끝나면 이벤트를 실행한다.
+    // load() : 이벤트는 외부에 연동된 source(iframe, img, video등)의 로딩이 끝나면 이벤트를 실행한다.
+    
+    $(function(){
+        $(document).ready(function(){
+            var h = $(".img").height();
+            console.log("ready() : " + h);
+        })
+
+        // 아래 꺼는 제이쿼리 버전 바꿔야함 (1.10.2)
+        $(window).load(function(){
+            var h = $(".img").height();
+            console.log("load() : " + h);
+        })
+    })
+    </script>
+</body>
+</html>

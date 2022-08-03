@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트-1</title>
+    <link rel="stylesheet" href="css/ShowHide.css">
+    <script src="js/ShowHide.js"></script>
+</head>
+<body>
+    <div id="item">
+        <img src="images/flower.png" alt="민들레">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div class="detail" id="desc" >
+            <h3>민들레</h3>
+            <p>
+                어디서나 매우 흔하게 보이는 잡초로써 바닥에 딱 붙어서 꽃봉오리
+                하나가 쏙 올라온다. 톱니 모양의 잎새와 눈에 확 띄는 노란 꽃이
+                인상적이다. 특히 꽃이 지고나면 솜털 모양의 깃을 가진 씨앗들이 
+                나오는데 바람을 타고 날라가서 널리 퍼진다.
+            </p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+    
+</body>
+</html>
