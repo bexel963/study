@@ -3,7 +3,7 @@ import java.util.Queue;
 
 // PriorityQueue는 저장 순서와 상관없이 우선 순위가 높은거 부터 차례로 꺼낸다.
 
-public class EX11_PriorityQueue {
+public class Ex11_PriorityQueue {
 
 	public static void main(String[] args) {
 

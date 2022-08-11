@@ -4,7 +4,7 @@ public class Ex31_InnerClass {
 	class InstanceInner {
 		int iv = 100;
 //		static int cv = 100;	-> static 변수를 선언할 수 없다.
-		final static int CONST = 100;
+		final static int CONST = 100;	// final static은 상수이므로 허용
 	}
 	static class StaticInner {
 		int iv = 200;
@@ -14,7 +14,7 @@ public class Ex31_InnerClass {
 		class LocalInner {
 			int iv = 300;
 //			static int cv = 300;	-> static 변수를 선언할 수 없다.
-			final static int CONST = 300;
+			final static int CONST = 300;	// final static은 상수이므로 허용
 		}
 	}
 	public static void main(String[] args) {

@@ -1,6 +1,8 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class Ex33_printBar {
 
@@ -14,28 +16,33 @@ public class Ex33_printBar {
 		
 		for(int i=0 ; i<data.length ; i++) {
 			if(map.containsKey(data[i])) {
-				Integer value = (Integer)map.get(data[i]);
-				map.put(data[i], new Integer(value.intValue() + 1));
+				Integer cnt = (Integer)map.get(data[i]);
+				int cntInt = cnt.intValue();
+				map.put(data[i], ++cntInt);
 			}else {
 				map.put(data[i], new Integer(1));
 			}
 		}
 		
-		Iterator it = map.entrySet().iterator();
+		Set set = map.entrySet();
+		Iterator it = set.iterator();
 		while(it.hasNext()) {
-			Map.Entry entry = (Map.Entry)it.next();
-			int value = ((Integer)entry.getValue()).intValue();
-			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " +value);
+			Map.Entry e = (Map.Entry)it.next();
+			System.out.println(e.getKey() + " : " + print(e));
 		}
+		
 	}
+	
+	public static String print(Map.Entry e) {
+		
+		char[] arr = null;
 
-	public static String printBar(char ch, int value) {
-		char[] bar = new char[value];
-		
-		for(int i=0 ; i<bar.length ; i++) {
-			bar[i] = ch;
+		arr = new char[(int)e.getValue()];
+		for(int i=0 ; i<arr.length ; i++) {
+			arr[i] = '#';
 		}
-		
-		return new String(bar);
+
+		return (new String(arr)) + " " + arr.length;
 	}
+	
 }

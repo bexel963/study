@@ -2,7 +2,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class EX37_ExternalFileWrite {
+public class Ex37_ExternalFileWrite {
 
 	public static void main(String[] args) {
 		

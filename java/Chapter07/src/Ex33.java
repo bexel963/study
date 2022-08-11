@@ -6,7 +6,7 @@ public class Ex33 {
 	static int outerCv = 0;
 	
 	class InstanceInner {
-		int iiv = outerIv;
+		int iiv = outerIv;	// 외부 클래스의 priavate멤버도 접근 가능.
 		int iiv2 = outerCv;
 	}
 	static class StaticInner {

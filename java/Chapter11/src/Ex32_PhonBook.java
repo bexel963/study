@@ -1,60 +1,65 @@
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class Ex32_PhonBook {
-
-	static HashMap phoneBook = new HashMap();
+	
+	public static HashMap phoneBook = new HashMap();
 	
 	public static void main(String[] args) {
+
+		regisPhone("친구", "이자바", "010-111-1111");
+		regisPhone("친구", "김자바", "010-222-2222");
+		regisPhone("친구", "김자바", "010-333-3333");
+		regisPhone("회사", "김대리", "010-444-4444");
+		regisPhone("회사", "김대리", "010-555-5555");
+		regisPhone("회사", "박대리", "010-666-6666");
+		regisPhone("회사", "이과장", "010-777-7777");
+		regisPhone("세탁", "010-888-8888");
 		
-		addPhoneNo("친구", "이자바", "010-111-1111");
-		addPhoneNo("친구", "김자바", "010-222-2222");
-		addPhoneNo("친구", "김자바", "010-333-3333");
-		addPhoneNo("회사", "김대리", "010-444-4444");
-		addPhoneNo("회사", "김대리", "010-555-5555");
-		addPhoneNo("회사", "박대리", "010-666-6666");
-		addPhoneNo("회사", "이과장", "010-777-7777");
-		addPhoneNo("세탁", "010-888-8888");
-		
-		printList();
+		printPhoneBook();
 	}
 	
-	static void addPhoneNo(String groupName, String name, String tel) {
-		addGroup(groupName);
-		HashMap group = (HashMap)phoneBook.get(groupName);
-		group.put(tel, name);
-	}
-	static void addGroup(String groupName) {
-		if(!phoneBook.containsKey(groupName)) {
-			phoneBook.put(groupName, new HashMap());
+	public static void regisPhone(String group, String name, String phone) {
+		
+		if(phoneBook.containsKey(group)) {
+			HashMap subMap = (HashMap)phoneBook.get(group);
+			subMap.put(phone, name);
+		}else {
+			phoneBook.put(group, new HashMap());
+			HashMap subMap = (HashMap)phoneBook.get(group);
+			subMap.put(phone, name);
 		}
 	}
-	static void addPhoneNo(String name, String tel) {
-		addPhoneNo("기타", name, tel);
-	}
-	static void printList() {
-		Set set = phoneBook.entrySet();
-		Iterator it = set.iterator();
+	
+	public static void regisPhone(String name, String phone) {
 		
-		while(it.hasNext()) {
-			Map.Entry e = (Map.Entry)it.next();
+		regisPhone("기타", name, phone);
+	}
+	
+	public static void printPhoneBook() {
+		
+		Set set = phoneBook.entrySet();
+		Iterator phoneBookIt = set.iterator();
+		while(phoneBookIt.hasNext()) {
+			Map.Entry entry = (Map.Entry)phoneBookIt.next();
 			
-			Set subSet = ((HashMap)e.getValue()).entrySet();
+			Set subSet = ((HashMap) entry.getValue()).entrySet();
 			Iterator subIt = subSet.iterator();
 			
-			System.out.println(" * " + e.getKey() + "[" + subSet.size() + "]");
+			int cnt = subSet.size();
 			
+			System.out.println("* " + entry.getKey() + "[" + cnt + "]");
 			while(subIt.hasNext()) {
-				Map.Entry subE = (Map.Entry)subIt.next();
-				String telNo = (String)subE.getKey();
-				String name = (String)subE.getValue();
-				System.out.println(name + " " + telNo);
+				Map.Entry subEntry = (Map.Entry)subIt.next();
+				System.out.println(subEntry.getValue() + "  " + subEntry.getKey());
 			}
 			System.out.println();
 		}
 	}
+	
 
 }
 

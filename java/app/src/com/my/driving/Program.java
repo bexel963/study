@@ -8,6 +8,7 @@ public class Program {
 
 		Passenger blackWidow = new Passenger("Natasha");
         blackWidow.sayName();
+        System.out.println();
 
         Vehicle motorcycle = new Vehicle(VehicleType.MOTORCYCLE);
         motorcycle.addPassenger(blackWidow);
@@ -31,18 +32,22 @@ public class Program {
 
         System.out.println("Motorcycle:");
         motorcycle.drive(50);
-
+        System.out.println();
+        
         System.out.println("Taxi:");
         taxi.drive(50);
+        System.out.println();
 
         System.out.println("Van:");
         van.drive(50);
+        System.out.println();
 
         van.removePassenger("Steve");
         van.removePassenger("Bucky");
 
         System.out.println("Van:");
         van.drive(1000);
+        System.out.println();
 
         System.out.println("Van:");
         van.addFuel(50.0);
