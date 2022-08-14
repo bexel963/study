@@ -1,0 +1,38 @@
+.tab-menu {
+    list-style: none;
+    height: 80px;
+}
+.tab-menu li {
+    width: 100px;
+    height: 40px;
+    background-position-y: 0;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+.tab-menu li:hover {
+    background-position-y: -40px;
+}
+/* li중에 선택되었을 때 */
+.tab-menu li.select {
+    background-position-y: -80px;
+    height: 80px;
+}
+.tab-menu li.menuitem1 {
+    background-image: url(../images/newbtn.bar.1.png);
+}
+.tab-menu li.menuitem2 {
+    background-image: url(../images/newbtn.bar.2.png);
+}
+.tab-menu li.menuitem3 {
+    background-image: url(../images/newbtn.bar.3.png);
+}
+.tab-menu li.menuitem4 {
+    background-image: url(../images/newbtn.bar.4.png);
+}
+.tab-menu li.menuitem5 {
+    background-image: url(../images/newbtn.bar.5.png);
+}
+.tab-menu li.menuitem6 {
+    background-image: url(../images/newbtn.bar.6.png);
+}

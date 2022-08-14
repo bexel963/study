@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수1</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <script>
+        // 변수에다가 함수를 저장하는 경우
+        function hi(name){
+            document.write(name + "님 환영합니다.<br>");
+        }
+        hi("홍길동");
+        var fhi = hi;   // 함수 리터럴 -> 함수를 변수에 저장한 꼴
+        fhi("임꺽정");
+
+        // 익명함수를 변수에 대입. -> 변수가 마치 함수명처럼 사용이 되는 꼴
+        var func = function(){
+            document.write("함수 리터럴<br>");
+        }
+        func();
+    </script>
+</body>
+</html>

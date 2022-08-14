@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 함수2</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnStart").click(function(){
+                start();
+                document.write("시작합니다.");
+            });
+
+            function start() {
+                var cnt = 0;
+                setInterval(function(){
+                    cnt++;      // 함수가 한번 끝나도 cnt가 메모리에서 제거되지 않는다.
+                    document.write(cnt);
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

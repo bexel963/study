@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수10 - 중첩함수의 변수의 범위</title>
+</head>
+<body>
+    
+    <script>
+        // 아래 3개의 변수는 전역변수
+        var a = 100;
+        var b = 200;
+        var c = 300;
+
+        function outter() {
+            // outter() 함수의 지역변수
+            var b = 2000;
+            var c = 3000;
+            function inner() {
+                var c = 5000;
+                document.write("1.a = " + a + "<br>");
+                document.write("2.b = " + b + "<br>");
+                document.write("3.c = " + c + "<br>");
+            }
+            inner();    // 외부 함수에서 내부 함수를 호출. (중첩 함수를 호출)
+        }
+
+        outter();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수풀이</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+    <script>
+
+        $(document).ready(function(){
+
+            checkCount(show1);
+        })
+        
+    
+        function checkCount(callback) {
+            var count = 0;
+            $("#btnStart").click(function(){
+                count++;
+                if(count >= 3){
+                    callback();
+                }
+            })
+        }
+
+        // 일반함수(로직처리 부분)
+        function show1() {
+            alert("버전1 - 완료되었습니다.");
+        }
+        function show2() {
+            alert("버전2 - 완료되었습니다.");
+        }
+        function show3() {
+            alert("버전3 - 완료되었습니다.");
+        }
+    </script>
+</body>
+</html>

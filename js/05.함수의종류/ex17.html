@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수풀이</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/tabMenu.css">
+</head>
+<body>
+    <ul class="tab-menu" id="tabmenu1">
+        <li class="menuitem1"></li>
+        <li class="menuitem2"></li>
+        <li class="menuitem3"></li>
+        <li class="menuitem4"></li>
+        <li class="menuitem5"></li>
+        <li class="menuitem6"></li>
+    </ul>
+    <div>선택한 인덱스 값 : <span id="info"></span></div>
+
+    <script>
+        $(document).ready(function(){
+            // 탭 메뉴 코드 실행될 수 있도록 함수 호출
+            tabMenu("#tabmenu1", onSelectItem);
+        });
+
+        function tabMenu(selector, callback) {
+            var $tabMenu = null;
+            var $menuItems = null;
+            var $selectedMenuItem = null;
+
+            init(selector);
+            initEvent();
+
+            // 요소 초기화
+            function init(selector) {
+                $tabMenu = $(selector);
+                $menuItems = $tabMenu.find("li");   // 6개의 웹요소인 li태그를 배열로 받는다.
+            }
+            // 이벤트 초기화 및 등록
+            function initEvent() {
+                $menuItems.click(function(){
+                    setSelectItem($(this));     // 현재 선택된 li라는 웹 요소를 매개변수로 지정하고 있다.
+                });
+            }
+
+            // 선택된 메뉴 아이템을 만들어주는 함수
+            function setSelectItem($item) {
+                // 선택된 메뉴가 있다면
+                if($selectedMenuItem != null){
+                    // 그 메뉴의 select를 제거
+                    $selectedMenuItem.removeClass("select");
+                }
+                // 매개변수로 넘어온 선택된 아이템을 대입
+                $selectedMenuItem = $item;
+                // 그 메뉴에 select를 추가
+                $selectedMenuItem.addClass("select");
+
+                // 선택 콜백 함수를 실행 하도록 하였다.
+                if(callback != null){
+                    callback($selectedMenuItem.index());
+                }
+            }
+        }
+        
+        // 로직 처리(선택 처리)
+        function onSelectItem(index) {
+            $("#info").html(index);
+        }
+    </script>
+</body>
+</html>

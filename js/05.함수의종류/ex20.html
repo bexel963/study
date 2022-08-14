@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저함수3 - ex16에 클로저 적용</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/tabMenu.css">
+</head>
+<body>
+    <ul class="tab-menu" id="tabmenu1">
+        <li class="menuitem1"></li>
+        <li class="menuitem2"></li>
+        <li class="menuitem3"></li>
+        <li class="menuitem4"></li>
+        <li class="menuitem5"></li>
+        <li class="menuitem6"></li>
+    </ul>
+    <div>선택한 인덱스 값 : <span id="info"></span></div>
+
+    <script>
+        $(document).ready(function(){
+            // 탭 메뉴 코드 실행될 수 있도록 함수 호출
+            tabMenu("#tabmenu1 li");
+        });
+
+        function tabMenu(selector) {
+
+            var $selectedMenuItem = null;   // 지역변수
+
+            $(selector).click(function(){   // 클로저 익명함수
+
+                if($selectedMenuItem != null){
+                    $selectedMenuItem.removeClass("select");
+                }
+                $selectedMenuItem = $(this);
+                $selectedMenuItem.addClass("select");
+                $("#info").html($selectedMenuItem.index());      
+            })
+        }
+    </script>
+</body>
+</html>
