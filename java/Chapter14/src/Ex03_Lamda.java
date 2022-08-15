@@ -1,4 +1,6 @@
 
+// - 외부 변수를 참조하는 람다식
+
 class Outer {
 	int val = 10;
 	
