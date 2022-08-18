@@ -10,6 +10,23 @@ import java.util.function.IntUnaryOperator;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/*
+ 	- 기본형을 사용하는 함수형 인터페이스
+ 		: 기본형 타입의 값을 처리할 때도 래퍼 클래스를 사용하면 비효율적이다.
+ 	
+ 			public interface DoubleToIntFunction {
+ 				int applyAsInt(double d);
+ 			}
+ 			public interface ToIntFunction<T> {
+ 				int applyAsInt(T value);
+ 			}
+ 			public interface intFunction<R> {
+ 				R apply(T t, U u);
+ 			}
+ 			public interface ObjIntConsumer<T> {
+ 				void accept(T t, U u);
+ 			}
+*/
 public class Ex06_Lamda {
 
 	public static void main(String[] args) {
