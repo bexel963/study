@@ -5,26 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>continue예제</title>
+    <script src="js/continue.js"></script>
 </head>
 <body>
-    
-    <script>
-        // 2의 배수를 제외하고 다 출력.
-        var input = window.prompt("숫자를 입력하세요.");
-        input = parseInt(input);
-        var num = 1;
-        while(true){
-            if(num == input){
-                break;
-            }
-            if(num%2 == 0){
-                document.write(num + " ");
-                ++num;
-            }else{
-                ++num;
-                continue;
-            }
-        }
-    </script>
 </body>
 </html>

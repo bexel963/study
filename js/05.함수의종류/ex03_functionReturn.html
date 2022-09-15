@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수3 - 리턴 값으로 함수를 이용</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <button id="btnStart">시작</button>
+
+    <script>
+        $(document).ready(function(){
+            
+            // 1. hi는 일반적인 함수.
+            function hi() {
+                document.write("안녕하세요. 반갑습니다. <br>");
+            }
+            // 2. 버튼 클릭되면 hi 함수가 실행된다. 즉, 리턴값으로 함수가 이용된 것이다.
+            $("#btnStart").on("click", hi);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2(노드에 접근하기)</title>
+    <style>
+        #container {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 20px 10px 0 50px;
+            border: 2px solid #ccc;
+        }
+        #img_load, #desc {
+            float: left;
+        }
+        #img_load {
+            margin-right: 30px;
+        }
+        #img_load img {
+            border: 1px solid #ccc;
+        }
+        .spn {
+            font-weight: 700px;
+            font-size: 1.0em;
+            font-style: italic;
+        }
+        .bright {
+            color: blue;
+        }
+        p {
+            font-size: 0.9em;
+            line-height: 1.4;
+            text-align: justify;
+        }
+        h1 {
+            font-size: 1,8em;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="text_head">국회의사당</h1>
+        <div id="img_load">
+            <img src="images/load.png">
+        </div>
+
+        <div id="desc">
+            <h2 class="bright">Infomation</h2>
+            <p>국회의사당은 언제 설립이 되었는가?<span class="spn"> 1548년</span></p>
+            <h2>Note</h2>
+            <p class="bright">국회의사당은 모든 국회의원이 모여서 안건을 제시, 제정한다.</p>
+        </div>
+    </div>
+
+    <script>
+        var text_head = document.getElementById("text_head");
+        text_head.onclick = function(){
+            this.style.fontSize = "3em";
+        }
+
+        var brights = document.getElementsByClassName("bright");    // HTMLCollection 반환
+        brights[0].style.textDecoration = "underline";
+        brights[1].style.color = "tomato";
+
+        var tags = document.getElementsByTagName("h2"); // HTMLCollection 반환
+        tags[0].style.backgroundColor = "#eee";
+        tags[1].style.backgroundColor = "#eee";
+
+        var querys = document.querySelectorAll("h2");   // 여러개 찾을 때 NodeList 반환
+        var queryId = document.querySelector("#text_head");
+    </script>
+</body>
+</html>

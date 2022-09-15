@@ -1,3 +1,4 @@
+// String클래스와 Date클래스의 경우 Object클래스toString()이 오버라이딩 되어있다.
 
 public class Ex05 {
 

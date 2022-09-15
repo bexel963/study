@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-4(이벤트 여러개 추가)</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            padding-top:20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="images/girl.png" id="pic">
+    </div>
+
+    <script>
+        // getElementById()
+        //  - id선택자가 있는 웹 요소에 접근할 때 사용하는 방법.
+        //  - DOM노드 중에서 노드요소 까지만 접근이 가능하다.
+        // querySelector()
+        //  - 노드요소 뿐만 아니라 텍스트 노드와 속성 노드까지 접근 가능하다.
+        var pic = document.querySelector("#pic");
+        // id선택자인 pic에게 마우스가 올라가면 changePic()를 호출하고,
+        // false는 버블링을 선택하지 않겠다는 뜻임.
+        // 버블링은 이벤트가 하위요소에서 발생하면 그 이벤트가 상위요소까지 전파되는 형태이다.
+        pic.addEventListener("mouseover", changePic, false);
+        pic.addEventListener("mouseout", originPic, false);
+        // 위와 같이 하나의 선택자에게 다중으로 이벤트를 등록할 수 있다.
+
+        function changePic() {
+            var src = "images/boy.png";
+            pic.setAttribute("src", src);
+        }
+        function originPic() {
+            var src = "images/girl.png";
+            pic.setAttribute("src", src);
+        }
+    </script>
+</body>
+</html>

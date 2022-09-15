@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String클래스 - slice(), substr()</title>
+</head>
+<body>
+    
+    <script>
+        var str1 = "KOREAAA";
+        var str2 = str1.slice(2,4);     // 지정 인덱스 부터 지정 인덱스-1 까지 잘라냄
+
+        document.write("str1 = " + str1 + "<br>");
+        document.write("str2 = " + str2 + "<br>");
+
+        document.write("<br>-------------------------------------------------<br><br>");
+
+        var str3 = "KOREAAA";
+        var str4 = str3.substr(2,4);    // 지정 인덱스 부터 지정 개수만큼 잘라냄
+
+        document.write("str3 = " + str3 + "<br>");
+        document.write("str4 = " + str4 + "<br>");
+    </script>
+</body>
+</html>

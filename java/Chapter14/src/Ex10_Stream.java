@@ -23,7 +23,7 @@ public class Ex10_Stream {
 		Stream<String> strStream2 = Stream.of(new String[] {"a", "b", "c"});			// Stream.of(T[])
 		Stream<String> strStream3 = Arrays.stream(new String[] {"a", "b", "c"});		// Arrays.stream(T[])
 		Stream<String> strStream4 = Arrays.stream(new String[] {"a", "b", "c"}, 0 , 3);	// Arrays.stream(T[], int startInclusive, int endExclusive)
-		// 기본형 스트림 : IntStream, LongStream, DoubleStream
+		// 기본형 스트림 : 기본형 배열을 소스로 하는 스트림 (IntStream, LongStream, DoubleStream)
 		IntStream intStream1 = IntStream.of(1, 2, 3 ,4, 5);				// IntStream IntStream.of(int... values)
 		IntStream intStream2 = IntStream.of(new int[] {1,2,3});			// IntStream IntStream.of(int[])
 		IntStream intStream3 = Arrays.stream(new int[] {1,2,3});		// IntStream Arrays.stream(int[])

@@ -1,0 +1,48 @@
+package com.my.graphics;
+
+import java.util.ArrayList;
+
+public class Picture extends Graphic {
+	
+	private ArrayList<Graphic> graphics;
+	
+	Picture(String label){
+		super(label);
+		this.graphics = new ArrayList<>();
+	}
+	
+	public void add(Graphic graphic) {
+		this.graphics.add(graphic);
+	}
+	
+	public void draw() {
+		int count = this.graphics.size();
+		
+		if(count<=0) {
+			return;
+		}
+		
+		System.out.printf("Draw picture '%s'%s", this.label, System.lineSeparator());
+		
+		for(int i=0 ; i<count ; ++i) {
+			Graphic g = this.graphics.get(i);
+			Class c = g.getClass();
+			String className = c.getSimpleName();
+			
+			switch(className) {
+				case "Circle":
+					((Circle)g).draw();
+					break;
+				case "Point":
+					((Point)g).draw();
+					break;
+				case "Line":
+					((Line)g).draw();
+					break;
+				case "Picture":
+					((Picture)g).draw();
+					break;
+			}
+		}
+	}
+}

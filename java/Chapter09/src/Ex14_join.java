@@ -14,7 +14,7 @@ public class Ex14_join {
 		
 		System.out.println(animal);
 		
-		StringJoiner sj = new StringJoiner("/", "< ", " >");
+		StringJoiner sj = new StringJoiner("/", "< ", " >");	// java.util.StringJoiner
 		for(String s : arr) {
 			sj.add(s.toUpperCase());
 		}

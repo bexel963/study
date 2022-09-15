@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지구본, 텍스트 흔들기</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/shake.css">
+</head>
+<body>
+    <div class="hello">
+        <div class="text">안녕하세요!!</div>
+    </div>
+
+    <script>
+        function hello() {
+            // 좌표값과 배경 이미지의 크기를 난수로 대입하기 위해서 값을 얻는다.
+            var rnd1 = Math.floor(Math.random()*20);
+            var rnd2 = Math.floor(Math.random()*40);
+            var rnd3 = Math.floor(Math.random()*3) + 100;
+
+            // 글자 흔들기
+            $(".hello").css({
+                "bottom" : rnd1, 
+                "left" : rnd2
+            });
+            // 배경 확대
+            $(".hello .text").css({"background-size" : rnd3 + "%"});
+        }
+        // 0.01초 마다 hello()함수가 호출된다.
+        setInterval(hello, 10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 방법1) var obj = new Object();
+        // 방법2) var obj = { };
+
+        var baby = {};
+        baby.age = "2살";
+        baby.sex = "남자";
+        baby.birthday = "5월 5일";
+        
+        document.write(baby.age + " " + baby.sex + "<br>");
+
+        var adult = {
+            age: "23살",
+            sex: "여자",
+            birthday: "2월 2일",
+            getAge: getAge 
+            // 메서드는 안에 작성해도 되고, 밖으로 빼도 된다.
+            // getAge: function(){
+            //     return this.age;
+            // }
+        }
+        function getAge() {
+            return this.age;
+        }
+
+        document.write(adult.age + " " + adult.sex + "<br>");
+        document.write(adult.getAge() + "<br>");
+    </script>
+</body>
+</html>

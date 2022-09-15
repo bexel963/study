@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur aperiam ut esse fugiat? Excepturi officiis necessitatibus nulla, sequi ullam omnis deleniti nisi veniam tempora. Non, omnis tempore! Aut, dolorum?
+            Atque suscipit et, natus nam eos fugiat eum vitae omnis facere ducimus, culpa laboriosam, eligendi minus ea ipsa. Nisi, ex praesentium modi reprehenderit et maxime odio vel maiores eligendi quis!
+            Repudiandae veniam quibusdam soluta perferendis obcaecati aperiam, natus dolores possimus accusantium molestias, optio, corporis eaque dolor consequuntur? Delectus consequuntur quod mollitia repellendus voluptatum nulla iure voluptatem. Neque dignissimos veniam quos!
+        </p>
+        <button id="submit" onclick="console.log('버튼이 클릭되었습니다.');">Click me</button>
+    </div>
+
+    <script>
+        /*
+            event 종류
+            - click
+            - mousedown : 마우스 클릭 했을 때 발생
+            - mouseup : 마우스에서 손가락을 땟을 때 발생
+            - change : input 요소의 변동이 있을 때 발생
+            - focus : 포커스를 얻었을 때 발생(링크, input등의 요소에..)
+            - keydonw : 키를 눌렀을 때 발생
+            - keyup : 키에서 손을 땟을 때 발생
+            - load : 로드가 완료 되었을 때 발생(body, image등 선택자가 로드 되었을 때)
+            - mouseover : 마우스가 특정 객체 위로 올려졌을 때 발생
+            - mouseout : 마우스가 특정 객체 밖으로 나갔을 때 발생
+            - select : option태그 등에서 선택을 했을 때 발생
+        */
+        var btn = document.getElementById('submit'),
+            container = document.querySelector('.container');
+        btn.addEventListener('click', function(){
+            btn.style.color = 'red';
+        });
+        container.addEventListener('mouseenter', function(){
+            console.log('마우스가 들어왔음.');
+        });
+        container.addEventListener('mouseleave', function(){
+            console.log('마우스가 나갔음.');
+        });
+        window.addEventListener('keydown', function(event){
+            console.log(event.key);
+            console.log(event.keyCode);
+        })
+    </script>
+</body>
+</html>

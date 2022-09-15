@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수2 - 매개변수 값으로 함수를 이용</title>
+</head>
+<body>
+    
+    <script>
+        // 1. hi1(), hi2()는 일번적인 함수.
+        function hi1() {
+            document.write("안녕하세요!");
+        }
+        function hi2() {
+            document.write("반갑습니다.");
+        }
+        // 2. 매개변수로 함수를 받는 함수.
+        function exec(func) {   // 매개변수 func가 외부로 부터 받은 함수를 참조하게 된다.
+            func();     // 매개변수가 참조하고있는 함수를 실행.
+        }
+        
+        exec(hi1);
+        exec(hi2);
+    </script>
+</body>
+</html>

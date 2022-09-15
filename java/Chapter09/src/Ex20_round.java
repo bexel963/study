@@ -20,6 +20,7 @@ public class Ex20_round {
 		out.printf("round(%3.1f) = %d\n", 1.1, round(1.1));
 		out.printf("round(%3.1f) = %d\n", 1.5, round(1.5));
 		out.printf("rint(%3.1f) = %f\n", 1.5, rint(1.5));
+		out.printf("rint(%3.1f) = %f\n", 2.5, rint(2.5));
 		System.out.println();
 		
 		out.printf("round(%3.1f) = %d\n", -1.5, round(-1.5));

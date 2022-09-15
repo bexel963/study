@@ -1,0 +1,30 @@
+.container {
+    width: 600px;
+    height: 500px;
+    position: relative;
+    border: 3px solid tomato;
+    margin: 20px 0;
+}
+.container #earth {
+    position: absolute;
+    width: 50px;
+    left: 250px;
+    top: 150px;
+    cursor: pointer;
+}
+#score {
+    font-size: 20px;
+    font-weight: bold;
+}
+#pointBox {
+    width: 600px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.timeBox {
+    width: 600px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}

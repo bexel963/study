@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String클래스 - 정규표현식을 이용한 전체 공백 제거</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <script>
+        var str = "    안녕하세요      반갑습니다.      문자열을   자릅니다.     ";
+
+        console.log('원본 문자 = ' + str);
+        console.log('전체 공백 제거 = ' + str.replace(/(\s*)/g, ""));
+        console.log('앞 공백 제거 = ' + str.replace(/^\s*/, ""));
+        console.log('뒷 공백 제거 = ' + str.replace(/\s*$/, ""));
+        // 전체 공백 제거는 js 정규표현식을 이용 해야한다.         
+        // 정규 표현식은 /   /  안에 넣어준다.
+        // \s : 공백 문자를 찾는다.
+        // \S : 공백 문자가 아닌 것을 찾는다.
+        // ^ : 입력의 시작을 찾음.
+        // $ : 입력의 끝을 찾음.
+        // * : 앞에 오는 문자를 0번 이상 찾는다. (ex_ "zo*"를 입력하면 "z"나 "zoo" 를 찾는다.)
+        // + : 앞에 오는 문자를 1번 이상 찾는다. (ex_ "zo+"를 입력하면 "z"는 찾지 않고 "zoo" 를 찾는다.)
+        // ? : 앞에 오는 문자를 0번 이상 찾는다. (ex_ "a?ve?"를 입력하면 "naver"에 있는 "ve"를 찾는다.)
+        // g : 전역 검색
+        // ( )는 그룹핑 하는거
+    </script>
+</body>
+</html>

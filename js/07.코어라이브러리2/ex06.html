@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date클래스</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .print {
+            width: 500px;
+            height: 250px;
+            text-align: center;
+            line-height: 200px;
+            vertical-align: center;
+            border: 3px solid tomato;
+        }
+        .print div {
+            height: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="print">
+        <div id="day"></div>
+        <div id="time"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            var $day = $("#day");
+            var $time = $("#time");
+            // Date클래스의 인스턴스를 얻음
+            var date = new Date();
+
+            var year = date.getFullYear();
+            var month = date.getMonth();    // 0(1월) ~ 11(12월)
+            var day = date.getDay();        // 0(일요일) ~ 6(토요일)
+            var arrDay = ["일", "월", "화", "수", "목", "금", "토"];            
+
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var second = date.getSeconds();
+            var msecond = date.getMilliseconds();
+
+            $day.html(year + "년 " + (month+1) + "월 " + day + "일 " + arrDay[day] + "요일 <br>");
+            $time.html(hour + "시 " + min + "분 " + second + "." + msecond + "밀리초 <br>");
+        })
+    </script>
+</body>
+</html>

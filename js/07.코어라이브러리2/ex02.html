@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String클래스 - indexOf()</title>
+</head>
+<body>
+    
+    <script>
+        var str = window.prompt("문자열을 입력해주세요.");
+        // indexOf()는 해당되는 문자(열)을 포함하고 있으면 그 위치를 리턴하고,
+        // 그렇지 않으면 -1을 리턴한다.
+        var index = str.indexOf("yes");
+
+        if(index >= 0){
+            document.write("index = " + index);
+        }else{
+            alert("문자(열)가 존재하지 않습니다.");
+            document.write("index = " + index);
+        }
+    </script>
+</body>
+</html>

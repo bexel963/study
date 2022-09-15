@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수6 - 일반 함수를 이용해서 프로그램 만들기</title>
+    <style>
+        #container {
+            border: 1px solid blue;
+            line-height: 10px;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="btnPrint">출력하기</button>
+    <div id="container">
+
+    </div>
+
+    <script>
+        var cnt = 0;
+        $container = null;
+        
+        $(document).ready(function(){
+            init();
+            exec();
+        })
+        function init() {
+            $container = $("#container");
+        }
+        function exec() {
+            print();
+            $("#btnPrint").on("click", print);
+        }
+        function print() {
+            $container.append("<p>" + cnt + ". 안녕하세요. 반갑습니다.</p>");
+            ++cnt;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

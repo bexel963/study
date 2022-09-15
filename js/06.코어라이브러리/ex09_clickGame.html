@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        #startBtn {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 180px;
+            cursor: pointer;
+        }
+        #score {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            margin-left: 5px;
+        }
+        #scoreText {
+            font-size: 20px;
+            font-weight: bold;  
+            margin-left: 20px;
+        }
+        .pannel {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            border: 2px solid gray;
+            margin-top: 20px;
+        }
+        #fish {
+            position: absolute;
+            left: 240px;
+            top: 165px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="">
+        <button id="startBtn">게임 시작</button>
+        <span id="scoreText">현재 점수 : </span>
+        <span id="score">0</span>
+    </div>
+    <div class="pannel">
+        <img src="images/fish1.png" alt="" id="fish">
+    </div>
+
+    <script>
+        var cnt = 0;
+        var $score = null;
+        var $fish = null;
+        var play = false;   // 플래그
+        var timerID = 0;
+
+        $(document).ready(function(){
+            init();
+            regisEvent();
+        });
+
+        function init() {
+            $score = $("#score");
+            $fish = $("#fish");
+        }
+        function regisEvent() {
+            $("#startBtn").on("click", function(){
+                startGame();
+            });
+        }
+        function getPoint() {
+            if(play == true){
+                cnt++;
+                $score.html(cnt);
+            }
+        }
+        function moveFish() {
+            var x = parseInt(Math.random()*480);
+            var y = parseInt(Math.random()*330);
+            $fish.css({
+                left: x,
+                top: y
+            });
+        }
+        function startGame() {
+            // 플래그 변수가 false일 때, 게임을 시작
+            if(play == false){
+                // 5초 뒤 게임 종료 시키기.
+                checkEndGame();
+                play = true;
+                timerID = setInterval(moveFish, 1000);
+                $fish.on("click", function(){
+                    getPoint();
+                });
+            }
+        }
+        function checkEndGame() {
+            // 게임은 5초 뒤에 종료
+            setTimeout(function(){
+                play = false;
+                clearInterval(timerID);
+                alert("게임 종료!");
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

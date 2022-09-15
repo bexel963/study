@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Javascript Basic Selector</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red" name="red">li 1</li>
+            <li>li 2</li> 
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="box">
+            box level1
+            <div>
+                box level2
+                <div>
+                    box level3
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos itaque praesentium libero officiis ducimus eum totam nam velit tempore. Rerum accusantium itaque eos quisquam non reprehenderit earum hic dolorem?
+        Voluptas, molestiae repudiandae minus, esse assumenda ex numquam soluta maiores minima sint ut iste odio! Quos, at officiis quod optio iure voluptate maiores? Officiis culpa excepturi minima illo, necessitatibus odit?
+        Qui laborum labore esse corporis quod sit quaerat asperiores! Voluptatibus veritatis tempore rerum velit vitae dolor incidunt ea debitis, expedita, qui dolores cumque veniam reprehenderit. Sed modi voluptatem porro provident!
+        Explicabo rerum beatae facilis laboriosam, cum quae impedit harum dolorum officia iste nostrum esse qui sint adipisci eligendi aperiam nam porro, repudiandae ipsam ullam blanditiis ex. Impedit ipsum neque consequuntur.
+        Tempore sit distinctio molestiae dicta at animi, sint dignissimos amet eligendi ipsum, excepturi minima libero praesentium esse. Eos aut quod consequuntur sunt doloribus mollitia, enim dolor aspernatur consectetur accusantium totam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos itaque praesentium libero officiis ducimus eum totam nam velit tempore. Rerum accusantium itaque eos quisquam non reprehenderit earum hic dolorem?
+        Voluptas, molestiae repudiandae minus, esse assumenda ex numquam soluta maiores minima sint ut iste odio! Quos, at officiis quod optio iure voluptate maiores? Officiis culpa excepturi minima illo, necessitatibus odit?
+        Qui laborum labore esse corporis quod sit quaerat asperiores! Voluptatibus veritatis tempore rerum velit vitae dolor incidunt ea debitis, expedita, qui dolores cumque veniam reprehenderit. Sed modi voluptatem porro provident!
+        Explicabo rerum beatae facilis laboriosam, cum quae impedit harum dolorum officia iste nostrum esse qui sint adipisci eligendi aperiam nam porro, repudiandae ipsam ullam blanditiis ex. Impedit ipsum neque consequuntur.
+        Tempore sit distinctio molestiae dicta at animi, sint dignissimos amet eligendi ipsum, excepturi minima libero praesentium esse. Eos aut quod consequuntur sunt doloribus mollitia, enim dolor aspernatur consectetur accusantium totam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos itaque praesentium libero officiis ducimus eum totam nam velit tempore. Rerum accusantium itaque eos quisquam non reprehenderit earum hic dolorem?
+        Voluptas, molestiae repudiandae minus, esse assumenda ex numquam soluta maiores minima sint ut iste odio! Quos, at officiis quod optio iure voluptate maiores? Officiis culpa excepturi minima illo, necessitatibus odit?
+        Qui laborum labore esse corporis quod sit quaerat asperiores! Voluptatibus veritatis tempore rerum velit vitae dolor incidunt ea debitis, expedita, qui dolores cumque veniam reprehenderit. Sed modi voluptatem porro provident!
+        Explicabo rerum beatae facilis laboriosam, cum quae impedit harum dolorum officia iste nostrum esse qui sint adipisci eligendi aperiam nam porro, repudiandae ipsam ullam blanditiis ex. Impedit ipsum neque consequuntur.
+        Tempore sit distinctio molestiae dicta at animi, sint dignissimos amet eligendi ipsum, excepturi minima libero praesentium esse. Eos aut quod consequuntur sunt doloribus mollitia, enim dolor aspernatur consectetur accusantium totam!
+    </p>
+
+    <script>
+        var firstTitle = document.getElementById('title');      
+        var myList1 = document.getElementsByClassName('list');   // 클래스는 복수개니까 getElements임.
+        var paragraphs = document.getElementsByTagName('p');
+        var myList2 = document.querySelector('.list .red');     // css의 selector 문법을 쓰겠다는 메서드.
+        console.log(firstTitle);
+        console.log(myList1);
+        console.log(paragraphs);
+        console.log(myList2);
+
+        firstTitle.style.color = 'red';
+        myList1[0].style.display = 'none';
+        
+        for(var i=0 ; i<paragraphs.length ; i++){
+            paragraphs[i].style.color = 'skyblue';
+        }
+    </script>
+</body>
+</html>

@@ -14,6 +14,9 @@ public class Ex06_Scanner {
 		
 		System.out.println("입력한 수 : " + input);
 		System.out.printf("num = %d\n", num);
+		
+		System.out.println(input.getClass().getName());
+		
 	}
 
 }

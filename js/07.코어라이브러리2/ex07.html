@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #clock {
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+    
+    </div>
+    
+    <script>
+        // 전역변수 선언
+        var $clock = null;
+
+        $(document).ready(function(){
+
+            $clock = $("#clock");
+
+            // 시간을 출력하는 함수
+            clock();
+        })
+
+        function clock() {
+
+            // 10보다 작은 값이면 0N 형식으로 변환 시키는 중첩 함수
+            function addZero(value) {
+                if(value<10){
+                    value = "0" + value;
+                }
+                return value;
+            }
+            // 현재 시간 출력하는 충첩 함수
+            function showClock(){
+                var date = new Date();
+                var hour = addZero(date.getHours());
+                var minute = addZero(date.getMinutes());
+                var second = addZero(date.getSeconds());
+
+                var time = hour + " : " + minute + " : " + second;
+                $clock.html(time);
+            }
+            // 시작과 동시에 함수 호출
+            showClock();
+
+            setInterval(function(){
+                showClock();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
