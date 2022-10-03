@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.my.copy&apos; to &apos;com.my.cppCopy&apos;&#x0D;&#x0A;- Original project: &apos;app&apos;&#x0D;&#x0A;- Original element: &apos;app/src/com.my.copy&apos;&#x0D;&#x0A;- Renamed element: &apos;app/src/com.my.cppCopy&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.my.copy&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.my.copy" name="com.my.cppCopy" qualified="false" references="true" stamp="1662031246923" textual="false" version="1.0"/>
+</session>

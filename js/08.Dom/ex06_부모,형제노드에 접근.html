@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-6</title>
+    <script src="js/regis.js"></script>
+    <style>
+        #container {
+            width: 500px;
+            margin: 20px auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+        form {
+            margin-top: 55px;
+        }
+        input[type="text"] {
+            float: left;
+            width: 300px;
+            padding: 12px;
+            border: none;
+            border-bottom: 1px solid gray;
+            font-size: 20px;
+        }
+        input:focus {
+            outline: none;
+        }
+        button {
+            width: 100px;
+            border: 1px solid gray;
+            padding: 10px;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: tomato;
+            cursor: pointer;
+        }
+        hr {
+            clear: both;
+            visibility: hidden;
+        }
+        #nameList p{
+            font-size: 20px;
+            text-indent: 50px;
+            line-height: 1.5;
+        }
+        .del {
+            font-size: 20px;
+            text-align: center;
+            color: tomato;
+            background: transparent;
+            float: right;
+            margin-right: 30px;
+        }
+        .del:hover {
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>참가 신청</h1>
+        <form action="">
+            <input type="text" id="userName" placeholder="이름을 입력하세요." required>
+            <button onclick="newRegister(); return false;">신청</button>
+        </form>
+        <hr>
+        <div id="nameList"></div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

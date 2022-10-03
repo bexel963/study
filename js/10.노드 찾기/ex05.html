@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 다루기 - each()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul class='container'>
+        <li>박지성</li>
+        <li>손흥민</li>
+        <li>기성용</li>
+        <li>안정환</li>
+        <li>황선홍</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            // 순차적으로 노드에 접근하여 그 인덱스를 출력하고 있다.
+            // $('.container li').each(function(index) {
+            //     document.write('index값 : ' + index + '<br>');
+            // });
+            // 순차적으로 노드에 접근하여 그 인덱스와 HTMLLiElement객체, element의 값을 출력하고 있다.
+            // 첫 번째 매개변수는 index, 두 번째 매개변수는 item(실제 리턴되는 객체)
+            // 세 번째 매개변수는 해당하는 value
+            $('.container li').each(function(a, b) {
+                document.write('index값 : ' + a + ', ' + b + ', ' + b.textContent + '<br>');
+            });
+        });
+    </script>
+</body>
+</html>

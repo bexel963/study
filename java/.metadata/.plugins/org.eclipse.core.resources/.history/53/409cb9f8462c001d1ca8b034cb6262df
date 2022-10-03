@@ -1,0 +1,18 @@
+package com.my.cup;
+
+public class AmericanMenu extends Menu {
+
+	public Cup createOrNull(CupSize size) {
+	switch (size) {
+		case SMALL:
+			return new Cup(355);
+		case MEDIUM:
+			return new Cup(473);
+		case LARGE:
+			return new Cup(651);
+		default:
+			assert(false) : "Unhandled CupSize: " + size;
+			return null;
+	}
+}
+}

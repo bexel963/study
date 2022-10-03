@@ -1,0 +1,16 @@
+package com.my.cup;
+
+public class Cup {
+
+	private int sizeMl;
+	
+	private Cup(int sizeMl) {
+		this.sizeMl = sizeMl;
+	}
+	
+	public static Cup createOrNull(Cupsize size) {
+		switch (size) {
+			
+		}
+	}
+}

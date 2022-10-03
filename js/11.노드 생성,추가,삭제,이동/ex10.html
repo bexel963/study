@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모든 자식노드 제거 - html(), remove()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='addBtn'>추가하기</button>
+    <button id='removeBtn1'>html()로 제거하기</button>
+    <button id='removeBtn2'>remove()로 제거하기</button>
+    <ul id='menu'></ul>
+
+    <script>
+        $(document).ready(function() {
+                            
+            $('#addBtn').on('click', function(){
+                var data = '';
+                for(var i=0 ; i<10 ; i++) {
+                    data += '<li>메뉴' + i + '</li>'; 
+                }
+                $('#menu').html(data);
+            });
+
+            // 모든 자식 노드 제거
+            // 단 한번의 메서드 호출
+            $('#removeBtn1').on('click', function(){
+                $('#menu').html('');
+            });
+
+            // remove()는 내부적으로 자식노드의 수만큼 호출 된다.
+            // remove()는 단일 jQuery객체를 제거할 때 주로 사용된다.
+            $('#removeBtn2').on('click', function(){
+                $('#menu li').remove();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -7,7 +7,7 @@
     <title>일반함수풀이</title>
     <script src="libs/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/tabMenu.css">
-    <!-- <script src="js/index.js"></script> -->
+    <script src="js/index.js"></script>
 </head>
 <body>
     <ul class="tab-menu" id="tabmenu1">
@@ -20,21 +20,6 @@
     </ul>
     <div>선택한 인덱스 값 : <span id="info"></span></div>
 
-    <script>
-        $(document).ready(function(){
-            var $tabmenu1 = $('#tabmenu1');
-            var $menuItems = $tabmenu1.find('li');
-            var $selectedItem = null;
-            var $info = $('#info');
-            $menuItems.on('click', function(){
-                if($selectedItem != null){
-                    $selectedItem.removeClass('select');
-                }
-                $selectedItem = $(this);
-                $selectedItem.addClass('select');
-                $info.html($selectedItem.index());
-            });
-        })
-    </script>
+    
 </body>
 </html>

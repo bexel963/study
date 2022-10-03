@@ -1,0 +1,5 @@
+package com.my.widget;
+
+public interface IDroppable {
+
+}

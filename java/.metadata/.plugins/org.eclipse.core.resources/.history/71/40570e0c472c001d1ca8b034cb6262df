@@ -1,0 +1,20 @@
+package com.my.cup;
+
+public class KoreanMenu extends Menu {
+
+	public Cup createCupOrNull(CupSize size) {
+		switch (size) {
+			case SMALL:
+				return new Cup(473);
+			case MEDIUM:
+				return new Cup(621);
+			case LARGE:
+				return new Cup(887);
+			default:
+				assert(false) : "Unhandled CupSize: " + size;
+				return null;
+		}
+	}
+
+	
+}

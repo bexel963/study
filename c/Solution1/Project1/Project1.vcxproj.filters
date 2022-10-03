@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="helloworld.c">
+    <ClCompile Include="fPointer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recursiveCall.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedList.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

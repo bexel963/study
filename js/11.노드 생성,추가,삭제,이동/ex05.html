@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 노드의 이전,이후 노드로 이동하기(hasClass(), insertBefore(), insertAfter()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='btnAdd'>추가하기</button>
+    <ul id='menu'>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class='select'>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            
+            // li를 클릭 했을 때, 그 li가 select선택자를 가지고 있으면,
+            // 리턴하고, 아니면 select클래스를 가지고 있는 li객체의 이전, 이후로 노드를 이동
+            var $menu = $('#menu');
+            $('#menu li').on('click', function(){
+                if($(this).hasClass('select') == true) {
+                    return;
+                }
+                // 이전으로 이동
+                // $(this).insertBefore($('.select'));
+                // 이후로 이동
+                $(this).insertAfter($('.select'));
+            });
+        });
+    </script>
+</body>
+</html>

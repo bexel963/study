@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String클래스 - replace(), 원하는 문자 제거, 공백제거</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        #input, #input2{
+            width: 300px;
+            font-size: 20px;
+        }
+        #output, #output2 {
+            width: 600px;
+            height: 200px;
+            border: 2px solid red;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>replace(), 공백제거(slice()사용, trim()사용)</h2>
+    </div>
+    <script>
+        var str = "반갑습니다.x님 자바스크립트 공부 중 입니다."
+        var name = "홍길동";
+        
+        var newStr = str.replace("x", name);    // 지정 문자를 찾아서 지정 문자로 치환 후 String 인스턴스를 리턴.
+
+        document.write("str = " + str + "<br>");
+        document.write("newStr = " + newStr + "<br>");
+
+        document.write("<br>-------------------------------------------------<br><br>");
+
+        var str2 = "반갑습니다-홍길동님";
+        var newStr2 = str2.slice(0, 5) + str2.slice(6, str.length); // 글자 요소 제거
+
+        document.write("str2 = " + str2 + "<br>");
+        document.write("newStr2 = " + newStr2 + "<br>");
+
+        document.write("<br>-------------------------------------------------<br><br>");
+
+        var str3 = "             반갑습니다. -      홍길동님 ";
+        // 앞, 뒤 공백 제거는 쉽게 할 수 있다.  문자열 중간에 있는 문자는 제거 못함.
+        // 앞만 제거 or 뒤만 제거 or 중간 제거 하려할 때는 함수를 만들어서 해야한다.
+        var newStr3 = str3.trim();  
+        document.write("str3 = " + str3 + "<br>");      // 이거론 확인 못함.
+        document.write("newStr3 = " + newStr3 + "<br>");
+        console.log("str3 = " + str3 + "<br>");         // 이걸로 확인
+        console.log("newStr3 = " + newStr3 + "<br>");
+    </script>
+
+    <hr>
+    <h2>왼쪽만 공백 제거 - 함수 만들어서 사용</h2>
+    <div>
+        <input type="text" id="input">
+        <button id="confirm">확인</button>
+    </div>
+    <textarea name="" id="output" cols="30" rows="10">실행결과</textarea>
+
+    <script>
+        $(document).ready(function(){
+            var $output = $("#output");
+            var $input = $("#input");
+
+            $("#confirm").on("click", function(){
+                var input = $input.val();
+                // 앞 공백 제거
+                var result = ltrim(input);
+                $output.html(result);
+            });
+        })
+        
+        // 앞 공백 제거 함수
+        function ltrim(str) {
+            // 문자열이 없는 경우
+            if(str.length <= 0){
+                return;
+            }
+            // 앞에 공백이 없다면..
+            var firstChar = str.charAt(0);
+            if(firstChar != " "){
+                return str;
+            }
+            
+            var index = 0;
+            // 공백이 끝나는 위치 찾기
+            for(index=1 ; index<str.length ; index++){
+                // 공백 문자가 아닐때까지 찾기
+                var ch = str.charAt(index);
+                // 문자를 만나면 반복문 나감.
+                if(ch != " "){
+                    break;
+                }
+            }
+            var result = str.slice(index, str.length);
+            return result;
+        }
+    </script>
+    <hr>
+    <h2>오른쪽만 공백 제거 - 함수 만들어서 사용</h2>
+    <div>
+        <input type="text" id="input2">
+        <button id="confirm2">확인</button>
+    </div>
+    <textarea name="" id="output2" cols="30" rows="10">실행결과</textarea>
+
+    <script>
+        $(document).ready(function(){
+            var $output = $("#output2");
+            var $input = $("#input2");
+
+            $("#confirm2").on("click", function(){
+                var input = $input.val();
+                // 뒤쪽 공백 제거
+                var result = Rtrim2(input);
+                $output.html(result);
+            });
+        })
+        
+        // 뒤 공백 제거 함수
+        function Rtrim2(str) {
+            // 문자열이 없는 경우
+            if(str.length <= 0){
+                return;
+            }
+            // 뒤에 공백이 없다면..
+            var lastChar = str.charAt(str.length-1);
+            if(lastChar != " "){
+                return str;
+            }
+            
+            var index = 0;
+            // 공백이 끝나는 위치 찾기
+            for(index=str.length-1 ; index>=0 ; index--){
+                // 공백 문자가 아닐때까지 찾기
+                var ch = str.charAt(index);
+                // 문자를 만나면 반복문 나감.
+                if(ch != " "){
+                    index++;    // for문에서 가감 한번 더 하는거 상쇄시키기
+                    break;
+                }
+            }
+            var result = str.slice(0, index);
+            return result;
+        }
+    </script>
+</body>
+</html>

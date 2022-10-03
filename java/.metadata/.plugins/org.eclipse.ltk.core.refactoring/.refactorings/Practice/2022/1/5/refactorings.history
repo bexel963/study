@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;abc&apos; to &apos;소수와약수구하기&apos;&#x0D;&#x0A;- Original project: &apos;Practice&apos;&#x0D;&#x0A;- Original element: &apos;abc&apos;&#x0D;&#x0A;- Renamed element: &apos;소수와약수구하기&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;abc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{abc.java[abc" matchStrategy="1" name="소수와약수구하기" qualified="false" references="true" similarDeclarations="false" stamp="1643147284854" textual="false" version="1.0"/>
+</session>

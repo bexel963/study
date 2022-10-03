@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 노드, 전체 노드의 삭제 - remove(), children()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='btnAllRemove'>모두 삭제하기</button>
+    <button id='btnEvenRemove'>짝수만 삭제하기</button>
+    <button id='btnOddRemove'>홀수만 삭제하기</button>
+    <ul id='menu'>
+        <li>메뉴0</li>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li class='select'>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            
+            // 클릭한 노드 삭제
+            $('#menu li').on('click', function(){
+                $(this).remove();
+            });
+
+            // 모든 자식 노드 삭제
+            $('#btnAllRemove').on('click', function(){
+                $('#menu').children().remove();
+            });
+
+            // 모든 자식 중 짝수(인덱스) 번째 노드만 삭제
+            $('#btnEvenRemove').on('click', function(){
+                $('#menu li:even').remove();
+            });
+
+            // 모든 자식 중 홀수(인덱스) 번째 노드만 삭제
+            $('#btnOddRemove').on('click', function(){
+                $('#menu li:odd').remove();
+            });
+        });
+    </script>
+</body>
+</html>

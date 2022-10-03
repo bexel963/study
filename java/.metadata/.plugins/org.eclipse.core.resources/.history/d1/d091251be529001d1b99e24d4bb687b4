@@ -1,0 +1,14 @@
+package com.my.widget;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		final Button button1 = new Button("Button1", 10, 5);
+		final Button button2 = new Button("Button2", 5, 0);
+		
+		final Card card1 = new Card("Card1", 0, 1);
+		final Card card2 = new Card("Card2", -10, -1);
+	}
+
+}

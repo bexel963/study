@@ -22,7 +22,7 @@
     <script>
         $(document).ready(function(){
             // 탭 메뉴 코드 실행될 수 있도록 함수 호출
-            tabMenu("#tabmenu1", onSelectItem);
+            tabMenu("#tabmenu1", onSelectItem2);
         });
 
         function tabMenu(selector, callback) {
@@ -67,6 +67,9 @@
         // 로직 처리(선택 처리)
         function onSelectItem(index) {
             $("#info").html(index);
+        }
+        function onSelectItem2(index) {
+            $('#info').html(index + '번');
         }
     </script>
 </body>

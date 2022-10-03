@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드찾기 - 특정 노드의 부모 노드 찾기</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: "굴림";
+        }
+        div, p, ul, li {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="samplePage" class="page">
+        샘플페이지(div, id=samplePage, class=page)
+        <div id="header" class=''>
+            헤더 영역(div, id=header)
+        </div>
+        <div id="content" class="sample-content">
+            노드 찾기(div, id="content" class="sample-content")
+            <ul class="menu">
+                일반 노드 찾기(ul, class=menu)
+                <li data-value="1">id로 찾기(li, data-value=1)</li>
+                <li class="select">tag로 찾기(li, class=select)</li>
+                <li data-value="2">class로 찾기(li, data-value=2)</li>
+                <li class="test1">속성으로 찾기(li, class=test1)</li>
+            </ul>
+            <div class="content-data">
+                자식 노드 찾기(div, class=content-data)
+                <p class="test1">1. 모든 자식 노드 찾기(p, class=test1)</p>
+                <p>2. 특정 자식 노드만 찾기(p)</p>
+                <p class="test2">2. 마지막 자식 노드 찾기(p, class=test2)</p>
+            </div>
+        </div>
+        <div id="footer" class='test2'>
+            푸터 영역(div, id=footer)
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            var $menu = $('ul.menu');
+
+            // 특정 조상 찾기
+            $menu.parent().css('border', '4px solid tomato');
+            
+            // 특정 조상 찾기
+            $menu.parent().parent().css('border', '4px solid blue');
+
+            // 특정 조상 찾기
+            console.log($menu.parents('.page'));
+
+            // 모든 조상 찾기
+            console.log($menu.parents());
+
+        });
+
+    </script>
+</body>
+</html>

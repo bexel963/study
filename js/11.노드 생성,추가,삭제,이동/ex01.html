@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성 -> 생성된 노드 확인 및 js로 추가하기</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='btnAdd'>추가하기</button>
+    <ul id='menu'>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class='select'>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            
+            var cnt = 0;
+            $('#btnAdd').on('click', function() {
+                cnt++;
+                // jQuery로 신규노드 만들기
+                var $li = $('<li>추가메뉴' + cnt + '</li>');
+                // [object HTMLLIElement] 출럭
+                console.log('jQuery로 생성된 노드 ' + $li.get(0));   
+
+                // js로 신규노드 만들고, 추가하기
+                var li = document.createElement('li');
+                var liText = document.createTextNode('추가메뉴 ' + cnt);
+                // TextNode를 li노드에 추가
+                li.appendChild(liText);
+                console.log('js로 생선된 노드: ' + li);
+                // menu선택자 노드에게 li노드 추가
+                var menu = document.querySelector('#menu');
+                menu.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>

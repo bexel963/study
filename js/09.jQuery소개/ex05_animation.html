@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: '굴림';
+        }
+        #pannel {
+            width: 600px;
+            height: 300px;
+            border: 2px solid black;
+            position: relative;
+        }
+        #gigu {
+            position: absolute;
+            left: 50px;
+            top: 140px;
+            width: 50px;
+        }
+        #bar {
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 15px;
+            background-color: #f30;
+        }
+        #nav {
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="pannel">
+            <div id="bar"></div>
+            <img src="images/gigu.png" alt="gigu" id='gigu'>
+        </div>
+        <div id="nav">
+            <button id='btnStart'>버튼</button>
+        </div>
+    </div>
+    <script>
+        // js는 애니메이션 기능이 없다. 타이머로 흉내만 낼 수 있을 뿐.
+        // jQuery에서는 애니메이션 기능을 제공한다.
+
+        // js로 버튼을 클릭하면 지구 이미지가 움직이는 효과 만들기
+        // window.onload = function() {
+        //     var earth = document.getElementById('gigu');
+        //     var btn = document.getElementById('btnStart');
+
+        //     var left = 50;
+        //     var timerID = 0;
+
+        //     btn.addEventListener('click', function() {
+        //         timerID = setInterval(function() {
+        //             left++;
+        //             earth.style.left = left + 'px';
+        //             if(left >= 500) {
+        //                 clearInterval(timerID);
+        //                 timerID = 0;
+        //             }
+        //         }, 10);
+                
+        //     })
+        // }
+
+        // jQuery로 작성
+        $(document).ready(function() {
+            var $earth = $('#gigu');
+            $('#btnStart').on('click', function() {
+                $earth.animate({
+                    left: 500
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

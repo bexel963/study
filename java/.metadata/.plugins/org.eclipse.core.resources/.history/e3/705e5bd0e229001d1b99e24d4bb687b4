@@ -1,0 +1,13 @@
+package com.my.widget;
+
+// 위젯은 GUI의 요소 중 하나로 정보를 보여주거나 사용자가 프로그램과 상호작용할 수 있는 방법을 제공함.
+// ex) 아이콘, 버튼, 창, 선택 상자 등..
+// 위젯마다 사용자의 행위(ex: 클릭, 드래그)에 반응하는 방법이 다름
+public abstract class Widget {
+
+	private static int numWidgets = 0;
+	
+	protected String label;
+	protected int x;
+	protected int y;
+}

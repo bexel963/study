@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 다루기 - index()의 주의점</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: "굴림";
+        }
+        div, p, ul, li {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+    </ul>
+
+    <script>
+        // 디버그 콘솔 확인
+        $(document).ready(function() {
+
+            // 연속해서 태그가 있지 않은 경우 jQuery객체.index()를 호출하면
+            // 인덱스 값이 항상 0이 나옴. (배열 형식으로 연속되어 있지 않아서)
+            // $('ul li a').on('click', function(){
+            //     console.log('index = ' + $(this).index());
+            // });
+            // 이런 경우 인덱스를 알고자 한다면 해당 요소들을 배열로 받아와서 접근 해야한다.
+            // $대상.index($대상);
+            // $대상.index(대상DOM); 을 한다.
+            var $aList = $('ul li a');
+            $('ul li a').on('click', function(){
+                console.log('index = ' + $aList.index(this));
+            });
+        });
+    </script>
+</body>
+</html>

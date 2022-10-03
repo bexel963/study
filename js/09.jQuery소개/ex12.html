@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul id=menu>
+        <li>menu1</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+
+            // 아래과 같이 하면 ul 인스턴스를 5개를 생성하여 메모리가 낭비된다.
+            $('#menu').append('<li>menu2</li>');
+            $('#menu').append('<li>menu3</li>');
+            $('#menu').append('<li>menu4</li>');
+            $('#menu').append('<li>menu5</li>');
+            $('#menu').css('border', '2px solid tomato');
+
+            // ul 인스턴스를 1개만 생성하여 변수에 대입하고, 그 변수를 재사용 한다.
+            var $menu = $('#menu');
+            $menu.append('<li>menu2</li>');
+            $menu.append('<li>menu3</li>');
+            $menu.append('<li>menu4</li>');
+            $menu.append('<li>menu5</li>');
+            $menu.css('border', '2px solid tomato');
+        });
+    </script>
+</body>
+</html>

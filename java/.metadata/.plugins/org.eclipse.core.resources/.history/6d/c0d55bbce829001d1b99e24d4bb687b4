@@ -1,0 +1,7 @@
+package com.my.cppCopy;
+
+public class Line {
+
+	private final Point p1;
+	private final Point p2;
+}

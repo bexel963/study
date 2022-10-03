@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 다루기 - length</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            cursor: pointer;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+            float: left;
+            background-color: tomato;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+    <script>
+        $(document).ready(function() {
+
+            // div노드 인스턴스 5개 생성되고 배열로 저장됨.
+            var $divList = $('div');
+
+            // 노드 배열의 2번째 노드 접근
+            var $div_two = $divList.eq(0);
+            
+            // eq()는 jQuery객체를 반환하고, get()은 Element객체를 반환한다.
+            var $div_one = $divList.get(1);
+
+            // []로도 get()처럼 Element객체를 반환한다.
+            var $div_five = $divList[4];
+
+            $div_two.css('background', 'skyblue');
+            $div_one.style.border = '3px dashed red';
+            $div_five.style.border = '3px dashed yellow';
+        });
+    </script>
+</body>
+</html>

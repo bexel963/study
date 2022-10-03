@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 클릭시 인덱스 출력</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .tab-menu {
+            list-style: none;
+            height: 80px;
+        }
+        .tab-menu li {
+            width: 100px;
+            height: 40px;
+            background-position-y: 0;
+            text-indent: -1000px;   /* li태그 안에 텍스트 안 보이게 하려고 뒤로 쭈욱 밈 */
+            overflow: hidden;
+            float: left;
+        }
+        /* li태그에 마우스를 올려 놓으면 적용 */
+        .tab-menu li:hover {
+            background-position-y: -40px;   /* 배경 아래로 내리기 */
+        }
+        /* li태그에 클래스 select가 설정되면 적용 */
+        .tab-menu li.select {
+            background-position-y: -80px;   /* 배경 아래로 내리기 */
+            height: 80px;
+        }
+        .tab-menu li.menuItem1 {
+            background-image: url(images/newbtn.bar.1.png);
+        }
+        .tab-menu li.menuItem2 {
+            background-image: url(images/newbtn.bar.2.png);
+        }
+        .tab-menu li.menuItem3 {
+            background-image: url(images/newbtn.bar.3.png);
+        }
+        .tab-menu li.menuItem4 {
+            background-image: url(images/newbtn.bar.4.png);
+        }
+        .tab-menu li.menuItem5 {
+            background-image: url(images/newbtn.bar.5.png);
+        }
+        .tab-menu li.menuItem6 {
+            background-image: url(images/newbtn.bar.6.png);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class='tab-menu' id='tabMenu1'>
+        <li class='menuItem1'>구글</li>
+        <li class='menuItem2'>페이스북</li>
+        <li class='menuItem3'>프린터리스트</li>
+        <li class='menuItem4'>트위터</li>
+        <li class='menuItem5'>에어비엔지</li>
+        <li class='menuItem6'>패스</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+
+            // $('#tabMenu1').on('click', function(e){ 
+            //     alert('index : ' + $(this).index());
+            // })
+            // 위에처럼 하면 index값 제대로 안 나옴.
+
+            // $('#tabMenu1 li').on('click', function(e){
+            //     alert('index : ' + $(this).index());
+            // })
+            
+            // 1초 간격으로 텝메뉴가 select 적용되게 하기
+            var currentIndex = 0;
+            var $menuItems = $('#tabMenu1 li');
+            var timerID = setInterval(function() {
+                var $item = $menuItems.eq(currentIndex);
+
+                $item.addClass('select');
+                currentIndex++;
+
+                if(currentIndex >= $menuItems.length) {
+                    clearInterval(timerID);
+                }
+                console.log('현재 인덱스 : ' + currentIndex);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

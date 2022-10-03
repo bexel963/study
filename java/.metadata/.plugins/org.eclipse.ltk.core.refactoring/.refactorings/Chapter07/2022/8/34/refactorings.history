@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Ex36&apos; to &apos;Ex36_anonymousClass&apos;&#x0D;&#x0A;- Original project: &apos;Chapter07&apos;&#x0D;&#x0A;- Original element: &apos;Ex36&apos;&#x0D;&#x0A;- Renamed element: &apos;Ex36_anonymousClass&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ex36&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Ex36.java[Ex36" matchStrategy="1" name="Ex36_anonymousClass" qualified="false" references="true" similarDeclarations="false" stamp="1660573523102" textual="false" version="1.0"/>
+</session>

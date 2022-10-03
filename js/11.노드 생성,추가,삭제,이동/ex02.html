@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성 -> jQuery로 추가하기(앞) - prepend(), prependTo()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='btnAdd'>추가하기</button>
+    <ul id='menu'>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class='select'>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+
+    <script>
+
+        $(document).ready(function() {
+            
+            var cnt = 0;
+            $('#btnAdd').on('click', function() {
+                
+                cnt++;
+                // 1. 신규 노드를 생성하고, 문자열을 이용해서 추가하는 방법
+                // $('#menu').prepend('<li>추가메뉴' + cnt + '</li>');     
+
+                // 2. 신규 노드를 직접 생성하여 추가하는 방법 (앞에 추가)
+                var $li = $('<li>추가메뉴' + cnt + '</li>'); 
+
+            /*
+                before : 선택한 요소의 앞에 내용 삽입
+
+                after : 선택한 요소의 뒤에 내용 삽입
+
+                prepend : 선택한요소의 자식요소 앞에 내용삽입
+
+                append : 선택한요소의 자식요소 뒤에 내용삽입     
+            */
+
+                // 2-1. prepend() 이용  
+                // $('#menu').prepend($li);
+
+                // 2-2. prependTo() 이용
+                // $li.prependTo('#menu');        
+
+                // 2-3. insertBefore() 이용
+                // $li.insertBefore('#menu li:first');
+
+                // 2-4. before() 이용
+                // $('#menu li:first').before($li);
+
+                // 3. 신규 노드를 직접 생성하여 추가하는 방법 (뒤에 추가)
+
+                // 3-1. append() 이용
+                // $('#menu').append($li);
+
+                // 3-2. appendTo() 이용
+                // $li.appendTo('#menu');
+
+                // 3-3. insertAfter() 이용
+                // $li.insertAfter('#menu li:first');
+                
+                // 3-4. after() 이용
+                $('#menu li:first').after($li);
+                
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+package com.my.widget;
+
+import java.util.ArrayList;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		final Button button1 = new Button("Button1", 10, 5);
+		final Button button2 = new Button("Button2", 5, 0);
+		
+		final Card card1 = new Card("Card1", 0, 1);
+		final Card card2 = new Card("Card2", -10, -1);
+		
+		final Directory directory1 = new Directory("New Folder1", 5, 9);
+		final Directory directory2 = new Directory("New Folder2", 12, 22);
+		
+		final ArrayList<Widget> widgets = new ArrayList<>();
+		
+		widgets.add(button1);
+		widgets.add(button2);
+		widgets.add(card1);
+		widgets.add(card2);
+		widgets.add(directory1);
+		widgets.add(directory2);
+		
+		for(Widget widget : widgets) {
+			System.out.printf("Widget label: %s%s", widget.getLabel(), System.lineSeparator());
+		}
+		// 1. Complie Error
+		// widget.onClick();
+		// widget.onDrag(10, 14);
+		// widget.onDropped(card1);
+		
+		// 2. 1번 처럼 하면 안 되고 이렇게 위젯을 그 인터페이스로 형 변환.....
+		final IClickable clickableButton = (IClickable)widgets.get(0);
+		clickableButton.onClick();
+		
+		System.out.println("============================================");
+		// 3. 2번 보다는 이 방법이 좋다.
+		
+		final ArrayList<IClickable> clickables = new ArrayList<>();
+		
+		clickables.add(button1);
+		clickables.add(button2);
+		clickables.add(directory1);
+		clickables.add(directory2);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

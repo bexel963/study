@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html() vs text()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+        }
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+        ul {
+            padding: 10px;
+        }
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <button id='okBtn'>확인</button>
+    <ul id='menu'>
+        <li>메뉴0</li>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li class='select'>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            
+            $('#okBtn').on('click', function(){
+                // html()은 jQuery객체 or DOM객체가 아닌 String을 반환한다.
+                // html()로 특정노드들의 마크업까지 확인을 할 수가 있다.
+                // html()은 자신을 제외한 자손 노드의 마크업과 텍스트의 정보를 반환한다.
+                console.log($('#menu').html());
+
+                console.log('----------------');
+
+                // text()는 단순히 텍스트 노드의 내용만 String으로 반환한다.
+                console.log($('#menu').text());
+            });
+        });
+    </script>
+</body>
+</html>

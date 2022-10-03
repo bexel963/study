@@ -1,0 +1,8 @@
+package com.my.cup;
+
+public class Lid {
+
+	Lid() {
+		System.out.println("∂—≤± µ§ø©¿÷¿Ω.");
+	}
+}

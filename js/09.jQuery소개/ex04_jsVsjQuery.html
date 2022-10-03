@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Vs jQuery</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: "굴림";
+        }       
+    </style>
+</head>
+<body>
+    <button id='btn1'>버튼</button>
+
+    <script>
+        // js로 버튼을 클릭하면 메시지 출력하는 코드 작성.
+        // window.onload = function() {
+        //     var btn1 = document.getElementById('btn1');
+        //     btn1.addEventListener('click', function() {
+        //         alert('메시지 출력');
+        //     })
+        // }
+
+        // jQuery로 코드 작성.
+        $(document).ready(function() {
+            var $btn1 = $('#btn1').on('click', function() {
+                alert('메시지 출력');
+            })
+        })
+    </script>
+</body>
+</html>

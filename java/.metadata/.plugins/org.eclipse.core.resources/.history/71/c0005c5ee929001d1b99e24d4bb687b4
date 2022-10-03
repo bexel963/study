@@ -1,0 +1,16 @@
+package com.my.cppCopy;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		final Point p1 = new Point(1, 1);
+		final Point p2 = new Point(p1);
+		
+		p1.setX(-4);
+		p1.setY(-8);
+		
+		
+	}
+
+}
