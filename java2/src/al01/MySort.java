@@ -69,7 +69,7 @@ public class MySort {
         return list.get(minIdx);
     }
 
-    // < 병합 정렬 (분할정복 기법 적용 >
+    // < 병합 정렬 (분할정복 기법 적용) >
     public int factorial(int n) {
         if(n < 2) {
             return 1;
@@ -166,11 +166,19 @@ public class MySort {
         int mid = list.size() / 2;
         ArrayList<Integer> leftList = new ArrayList<Integer>();
         ArrayList<Integer> rightList = new ArrayList<Integer>();
+        ArrayList<Integer> mergeList = new ArrayList<>();
 
         leftList = mergeSort(new ArrayList<Integer>(list.subList(0, mid)));
+        System.out.println("leftList: " + leftList);
         rightList = mergeSort(new ArrayList<Integer>(list.subList(mid, list.size())));
+        System.out.println("rightList: " + rightList);
 
-        return mergeFunc(leftList, rightList);
+        mergeList = mergeFunc(leftList, rightList);
+        System.out.println(cnt + ". " + mergeList);
+
+
+
+        return mergeList;
     }
 
     public ArrayList<Integer> mergeFunc(ArrayList<Integer> leftList, ArrayList<Integer> rightList) {
@@ -199,7 +207,7 @@ public class MySort {
             mergedList.add(rightList.get(rightPoint));
             rightPoint++;
         }
-
+        cnt++;
         return mergedList;
     }
     // < 퀵 정렬 (분할정복 전력 적용) >

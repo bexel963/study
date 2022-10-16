@@ -1,34 +1,39 @@
 package gram02;
 
 import java.util.Calendar;
-// 첫 주와 마지막 주가 이전, 이후 달과 연결되는 달력
+
+// 달력
 public class Ex06_Calendar {
     public static void main(String[] args) {
-
+        
         int year = 2022;
-        int month = 9;
-
+        int month = 10;
+        int START_DAY_OF_WEEK = 0;
+        int END_DAY = 0;
+        
         Calendar sDay = Calendar.getInstance();
         Calendar eDay = Calendar.getInstance();
-        sDay.set(year, month-1, 1);
-        eDay.set(year, month-1, sDay.getActualMaximum(Calendar.DATE));  // 말일 설정
-
-        // 1일이 속한 주의 일요일로 날짜 설정                 -5 + 1
-        System.out.println(sDay.get(Calendar.DATE));
-        sDay.add(Calendar.DATE, -sDay.get(Calendar.DAY_OF_WEEK) + 1);
-        System.out.println(sDay.get(Calendar.DATE));
-        // 말일이 속한 주의 토요일로 날짜 설정
-        eDay.add(Calendar.DATE, 7 -eDay.get(Calendar.DAY_OF_WEEK));
+        
+        sDay.set(year, month-1, 1);   // 해당 달의 시작일
+        eDay.set(year, month, 1);           // 다음달 1일
+        eDay.add(Calendar.DATE, -1);      // 해당 달의 마지막일 (다음달 1일에서 1일 빼기 => 전달 마지막 일) 
+        
+        START_DAY_OF_WEEK = sDay.get(Calendar.DAY_OF_WEEK); // 첫 번째 요일 알아내기
+        END_DAY = eDay.get(Calendar.DATE);                  // 마지막 일 얻어오기
 
         String title = String.format("      < %d년  %d월 >\n   일  월  화  수  목  금  토", year, month);
         System.out.println(title);
 
-        for(int n=1 ; sDay.before(eDay) || sDay.equals(eDay) ; sDay.add(Calendar.DATE, 1)) {
-            int day = sDay.get(Calendar.DATE);
-            System.out.print((day<10) ? "   " + day : "  " + day);
-            if(n++%7==0) {
+        for(int i=0 ; i<START_DAY_OF_WEEK ; i++) {
+            System.out.print("   ");
+        }
+        System.out.print("   ");
+        for(int i=1, n=START_DAY_OF_WEEK ; i<END_DAY ; i++, n++) {
+            System.out.print((i<10) ? "   "+i : "  "+i);
+            if(n % 7 == 0) {
                 System.out.println();
             }
         }
+        
     }
 }

@@ -8,25 +8,25 @@ public class Main {
 
         MySort sort = new MySort();
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(49, 97, 53, 5, 33, 65, 62, 51));
 
 //        for(int i=0 ; i<10 ; i++) {
 //            list.add((int)(Math.random()*50) + 1);
 //        }
-        int cnt = 0;
-        int value = 0;
-        while(list.size() != 10) {
-            boolean isValue = false;
-            value = (int)(Math.random()*50) + 1;
-            for(int i=0 ; i<list.size()-1 ; i++) {
-                if(value == list.get(i)) {
-                    isValue = true;
-                }
-            }
-            if(!isValue) {
-                list.add(value);
-            }
-        }
+//        int cnt = 0;
+//        int value = 0;
+//        while(list.size() != 10) {
+//            boolean isValue = false;
+//            value = (int)(Math.random()*50) + 1;
+//            for(int i=0 ; i<list.size()-1 ; i++) {
+//                if(value == list.get(i)) {
+//                    isValue = true;
+//                }
+//            }
+//            if(!isValue) {
+//                list.add(value);
+//            }
+//        }
         System.out.println("---------------------------------------");
 
         System.out.println("정렬 전: " + list);
