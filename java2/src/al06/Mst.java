@@ -23,18 +23,18 @@ class Edge implements Comparable<Edge> {
     }
 }
 public class Mst {
-    HashMap<String, String> parent = new HashMap<>();   // 노드 -> 부모노드
-    HashMap<String, Integer> rank = new HashMap<>();    // 노드 -> 높이(rank)
+    HashMap<String, String> parent = new HashMap<>();   // 노드 -> 부모노드       : find할 때 사용한다.
+    HashMap<String, Integer> rank = new HashMap<>();    // 노드 -> 높이(rank)    : union할 때 사용한다.
 
-    // 노드의 부모 찾기
+    // 해당 노드의 루트노드 찾기
     public String find(String node) {
-        // path compression 기법
+        // path compression 기법 : 한 번 탐색된 노드의 부모노드를 루트노드로 바꿔준다. (트리의 높이를 낮춰줌.)
         if(parent.get(node) != node) {
             parent.put(node, find(parent.get(node)));
         }
         return parent.get(node);
     }
-    // 트리 합치기
+    // 트리 합치기 : 각 노드의 루트 노드를 찾고, 루트 노드가 다르면 두 노드를 합친다.
     public void union(String nodeV, String nodeU) {
         String root1 = find(nodeV);
         String root2 = find(nodeU);
@@ -51,8 +51,8 @@ public class Mst {
     }
     // 초기화
     public void makeSet(String node) {
-        parent.put(node, node);
-        rank.put(node, 0);
+        parent.put(node, node); // 독립된 한 개의 노드는 자신이 루트 노드가 된다.
+        rank.put(node, 0);      // 독립된 한 개의 노드는 높이가 0 이다.
     }
     // Mst알고리즘 구현
     public ArrayList<Edge> kruskalFunc(ArrayList<String> vertices, ArrayList<Edge> edges) {

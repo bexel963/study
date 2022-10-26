@@ -19,7 +19,7 @@ class Edge implements Comparable<Edge> {
     @Override
     public int compareTo(Edge edge) {
         return this.distance - edge.distance;
-    }
+    }   // 우선순위 큐가 잘 작동하도록....
 }
 public class Main {
     public static void main(String[] args) {
