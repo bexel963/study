@@ -47,6 +47,8 @@ public class BackTracking {
         }
         return true;
     }
+    // N=4, currentRow=0
+
     public void dfsFunc(Integer N, Integer currentRow, ArrayList<Integer> currentCandidate) {
         if(currentRow == N) {
             System.out.println(currentCandidate);   // 퀸 위치 출력

@@ -39,6 +39,17 @@ class Edge implements Comparable<Edge> {
 */
 public class PrimPath {
 
+    // 1. 모든 간선 정보 저장 (그래프를 List로 표현)
+    // 2. 각 노드와 연결되어 있는 간선 정보를 map으로 표현. - adjacentEdges
+    // 2-1. key : A ~ G, value : 각 key값과 연결된 간선 리스트들이 들어갈 자리인 빈 List의 인스턴스 생성
+    // 2-2. 각 key와 연결된 간선리스트들을 value의 List에 추가.
+    // 3. start노드를 연결된 노드 집합에 넣음. - connectedNodes
+    // 4. start노드와 연결된 간선리스트를 뽑음. - candidateEdgeList
+    // 5. candidateEdgeList의 각 요소들을 차례로 최소heap에 넣음.
+    // 6. 최소heap이 모두 비워질 때까지 반복....
+    // 6-1. 최소heap에서 Edge를 하나 꺼냄.
+    // 6-2. 꺼낸 Edge의 node2가 connectedNodes에 없으면 connectedNodes에 node2를 넣고, 그 Edge를 mst에 넣음.
+    // 6-3. 꺼낸 Edge의 node2와 연결되어있는 간선들을 차례로 최소heap에 넣음. (이 때, 해당 간선의 node2가 connectedNodes에 있으면 넣지 않음.)
     public ArrayList<Edge> primFunc(String startNode, ArrayList<Edge> edges) {
 
         Edge currentEdge, poppedEdge, adjacentEdgeNode;
