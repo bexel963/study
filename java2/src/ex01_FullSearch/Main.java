@@ -1,6 +1,7 @@
 package ex01_FullSearch;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /*
@@ -21,13 +22,16 @@ public class Main {
 
     static StringBuilder sb = new StringBuilder();
     static int N, M;
-    static int[] selected;
+    static int[] selected, used;
 
     static void input() {
         FastReader scan = new FastReader();
+        System.out.print("N : ");
         N = scan.nextInt();
+        System.out.print("M : ");
         M = scan.nextInt();
         selected = new int[M + 1];
+        used = new int[M+2];
     }
 
     // Recurrence Function (재귀 함수)
@@ -49,12 +53,110 @@ public class Main {
             }
         }
     }
+
+    // func1에서 중복을 허용하지 않는다는 조건 추가
+    static void rec_func2_1(int k) {
+
+        if(k == M + 1) {
+            for(int i=1 ; i<=M ; i++) {
+                sb.append(selected[i]).append(' ');
+            }
+            sb.append('\n');
+        } else {
+            for(int candidate=1 ; candidate<=N ; candidate++) {
+                boolean isUsed = false;
+                for(int i=1 ; i<k ; i++) {
+                    if(candidate == selected[i]) {
+                        isUsed = true;
+                    }
+                }
+                if(!isUsed) {
+                    selected[k] = candidate;
+                    rec_func2_1(k+1);
+                    selected[k] = 0;
+                }
+            }
+        }
+    }
+
+    // func2_1 에서 반복문 1개를 배열로 대체 -> 시간 복잡도 줄어듦.
+    static void rec_func2_2(int k) {
+        if(k == M + 1) {
+            for(int i=1 ; i<=M ; i++) {
+                sb.append(selected[i]).append(' ');
+            }
+            sb.append('\n');
+        } else {
+            for(int candidate=1 ; candidate<=N ; candidate++) {
+                // candidate 가 쓰인적이 있다면
+                if(used[candidate] == 1) {
+                    continue;
+                }
+                selected[k] = candidate;    used[candidate] = 1;
+
+                rec_func2_2(k+1);
+
+                selected[k] = 0;            used[candidate] = 0;
+                                            // used[candidate]를 초기화 해야한다.
+            }
+        }
+    }
+
+    // func1에서 '고른 수열이 비내림차순' 이라는 조건 추가.
+    /*
+        1 1 1
+        ....
+        2 2 2
+        2 2 3
+        2 2 4
+        2 3 3
+        2 3 4
+        2 4 4
+        3 3 3
+        3 3 4
+        3 4 4
+        4 4 4
+    */
+    static void rec_func3(int k) {
+        if(k == M + 1) {
+            for(int i=1 ; i<=M ; i++) {
+                sb.append(selected[i]).append(' ');
+            }
+            sb.append('\n');
+        } else {
+            int start = selected[k-1];
+            if(start==0) {
+                start = 1;
+            }
+            for(int candidate=start ; candidate<=N ; candidate++) {
+                selected[k] = candidate;
+                rec_func3(k+1);
+                selected[k] = 0;
+            }
+        }
+    }
+
+    // func1에서 '중복을 허용하지 않고 오름차순 정렬' 이라는 조건 추가
+    static void rec_func4(int k) {
+        if(k == M + 1) {
+            for(int i=1 ; i<=M ; i++) {
+                sb.append(selected[i]).append(' ');
+            }
+            sb.append('\n');
+        } else {
+            for(int candidate=selected[k-1]+1 ; candidate<=N ; candidate++) {
+                selected[k] = candidate;
+                rec_func4(k+1);
+                selected[k] = 0;
+            }
+        }
+    }
     public static void main(String[] args) {
 
         input();
 
         // 1 번째 원소부터 M 번째 원소를 조건에 맞는 모든 방법을 찾아줘!
-        rec_func1(1);
+        rec_func4(1);
 
         System.out.println(sb);
     }

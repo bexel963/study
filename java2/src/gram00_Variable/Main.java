@@ -1,4 +1,4 @@
-package gram00;
+package gram00_Variable;
 /*
     - 자료형은 값이 저장될 공간의 크기와 저장형식을 정의한 것.
     - 자바에서는 클래스의 이름이 참조변수의 타입이 된다. (변수의 타입이 기본형이 아닌 것들은 모두 참조변수이다.)
@@ -149,7 +149,7 @@ class Char {
           그래서 byte,short 보다 int를 사용하는 것이 더 효율적이다.
 */
 
-class Etc {
+class Overflow {
 
     void func1() {
         short sMin = -32768;
@@ -165,8 +165,123 @@ class Etc {
         System.out.println("cMin-1 = " + (int)--cMin);          // cMin-1 = 65535
         System.out.println("cMax   = " + (int)cMax);            // cMax   = 65535
         System.out.println("cMax+1 = " + (int)++cMax);          // cMax+1 = 0
+        System.out.println();
     }
 }
+/*
+    - 실수형
+        : 정수 타입은 부호와 값 두 부분으로 이루어져있지만, 실수 타입은 부호(S), 지수(E), 가수(M) 세 부분으로 이루어져 있다.
+        : float의 정밀도는 7자리이고, double의 정밀도는 15자리 이다.
+*/
+class Float_Double {
+
+    void func1() {
+        float f = 9.12345678901234567890f;
+        float f2 = 1.2345678901234567890f;
+        double d = 9.12345678901234567890d;
+
+        System.out.printf("      123456789012345678901234\n");
+        // printf()의 %f는 기본적으로 소수점 이하 6자리까지만 출력하므로, 7번째 자리에서 반올림 된다.
+        System.out.printf("f   :   %f\n", f);
+        System.out.printf("f   : %24.20f\n", f);    // 위의 값이랑 7자리까지 같다.
+        // 간혹 우연히 8자리 이상이 일치하는 경우도 있다.
+        System.out.printf("f2  : %24.20f\n", f2);
+        System.out.printf("d   : %24.20f\n", d);
+        System.out.println();
+    }
+}
+/*
+    - 형변환
+        : 변수 또는 상수의 타입을 다른 타입으로 변환하는 것
+        : 기본형에서 boolean을 제외한 나머지 타입들은 서로 형변환이 가능하다.
+        : 기본형과 참조형간의 형변환은 불가능하다.
+        1) 정수형간의 형변환
+        2) 실수형간의 형변환
+        3) 정수형, 실수형 간의 형변환.
+*/
+class Casting {
+    void func1() {
+        int i = 10;
+        byte b = (byte)i;
+        System.out.printf("[int -> byte] i=%d -> b=%d\n", i, b);
+
+        i = 300;
+        b = (byte)i;
+        System.out.printf("[int -> byte] i=%d -> b=%d\n", i, b);
+
+        b = 10;
+        i = (int)b;
+        System.out.printf("[byte -> int] b=%d -> i=%d\n", b, i);
+
+        b = -2;
+        i = (int)b;
+        System.out.printf("[byte -> int] b=%d -> i=%d\n", b, i);
+
+        System.out.println("i = " + Integer.toBinaryString(i));
+
+        System.out.println();
+    }
+    void func2() {
+        float f = 9.1234567f;
+        double d = 9.1234567;
+        double d2 = (double)f;  // 한번 값이 저장되었으므로 형 변환 한다고 되돌아오지 않는다.
+
+        System.out.printf("f  = %20.18f\n", f);
+        System.out.printf("d  = %20.18f\n", d);
+        System.out.printf("d2 = %20.18f\n", d2);
+
+        System.out.println();
+    }
+    void func3() {
+        /*
+            - 정수형 -> 실수형
+                : 실수형은 정수형보다 훨씬 큰 저장범위를 갖기 때문에, 정수형을 실수형으로 변환하는 것은 별 무리가 없다.
+                  정수를 2진수로 변환한 다음 정규화해서 실수의 저장형식에 맞게 저장할 뿐이다.
+                  한 가지 주의할 점은 실수형의 정밀도의 제한으로 인한 오차가 발생할 수 있는 것이다.
+                  그래서 10진수로 8자리 이상의 값을 실수형으로 변환할 때는 float가 아닌 double로 형변환 해야한다.
+            - 실수형 -> 정수형
+                : 실수형을 정수형으로 변환하면, 실수형의 소수점 이하 값은 버려진다.
+        */
+        int i = 91234567;
+        float f = (float)i;
+        int i2 = (int)f;
+
+        double d = (double)i;
+        int i3 = (int)d;
+
+        float f2 = 1.666f;
+        int i4 = (int)f2;
+
+        System.out.printf("i = %d\n", i);
+        System.out.printf("f = %f   i2=%d\n", f, i2);
+        System.out.printf("d = %f   i3=%d\n", d, i3);
+        System.out.printf("(int)%f = %d\n", f2, i4);
+
+        System.out.println();
+
+        int j = 100;
+        byte b = (byte)j;
+    }
+}
+/*
+    - 자동 형변환
+        : 컴파일러는 기존의 값을 최대한 보존할 수 있는 타입으로 자동 형변환 한다.
+        : 서로 다른 타입의 변수간의 연산은 형변환을 하는 것이 원칙이지만, 값의 범위가 작은 타입에서 큰 타입으로의 형변환은 생략할 수 있다.
+        : 변수가 저장할 수 있는 값의 범위보다 더 큰 값을 저장하려는 경우 형변환을 생략하면 에러가 발생한다. (큰 타입에서 작은 타입으로 형변환 시)
+          그러나 명시적으로 형변환을 해줬을 경우, 형변환이 프로그래머의 실수가 아닌 의도적인 것으로 간주하고 컴파일러는 에러를 발생시키지 않는다.
+        ex)
+        float f = 1234;         // OK
+        byte b = 1000;          // 에러
+        byte b = (byte)1000;    // OK
+        char ch = (char)1000;   // OK
+
+        byte b = 100;           // OK
+        byte b = (byte)100;     // OK
+
+        int i = 100;            // OK
+        byte b = i;             // Error - 컴파일러가 타입만 알고 값은 몰라서...
+        byte b = (byte)i;       // OK
+*/
 public class Main {
     public static void main(String[] args) {
 
@@ -175,7 +290,13 @@ public class Main {
         sf.print2();
         Char ch = new Char();
         ch.print1();
-        Etc etc = new Etc();
+        Overflow etc = new Overflow();
         etc.func1();
+        Float_Double fd = new Float_Double();
+        fd.func1();
+        Casting cst = new Casting();
+        cst.func1();
+        cst.func2();
+        cst.func3();
     }
 }
