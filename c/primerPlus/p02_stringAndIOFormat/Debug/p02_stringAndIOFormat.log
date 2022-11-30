@@ -1,0 +1,6 @@
+﻿  S11_scanf.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S11_scanf.c(14,8): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'float *'입니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S11_scanf.c(14,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S11_scanf.c(5,7): warning C4101: 'ch' :참조되지 않은 지역 변수입니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S11_scanf.c(6,6): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
+  p02_stringAndIOFormat.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p02_stringAndIOFormat.exe

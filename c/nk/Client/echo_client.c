@@ -10,6 +10,21 @@
 		  그리고 이 과정에서 데이터의 모든 조각이 클라이언트에게 전송되지 않았음에도 불구하고, 클라이언트는 read함수를 호출할지도 모른다.
 		  이 모든 문제가 TCP의 데이터 전송특성에서 비롯된 것이다.
 */
+
+/*
+	- 에코 클라이언트는 문자열을 write함수 호출을 통해 한방에 전송하고, read함수를 통해 자신이 전송한 문자열 데이터를 한방에 수신하기를 원한다는 문제가 있다.
+	  시간이 좀 지나면 100% 수신할 수 있지만 이는 이치에 맞는 클라언트가 아니다.
+	  이치에 맞는 클라이언트라면, 문자열 데이터가 전송되었을 때 이를 모두 읽어서 출력해야 한다.
+
+	- 에코 클라이언트의 경우 수신해야 할 데이터의 크기를 미리 알고 있기 때문에 그 크기만큼의 데이터를 수신할 때 까지 반복해서 read함수를 호출하면 된다.
+
+	- 수산할 데이터의 크기를 파악하는 것이 불가능한 경우에 필요한 것이 바로 어플리케이션 프로토콜의 정의의다.
+			ex) "Q가 전달되면 연결을 종료한다."
+	  예 처럼 데이터의 송수신 과정에서 데이터의 끝을 파악할 수있는 프로토콜을 별도로 정의해서 데이터의 끝을 표현하거나, 송수신될 데이터의 크기를 미리 알려줘서
+	  그에 따른 대비가 가능해야 한다.
+	  서버, 클라이언트의 구현 과정에서 이렇게 하나, 둘씩 만들어지는 약속을 모아서 '어플리케이션 프로토콜' 이라고 한다.
+	  즉, 어플리케이션 프로토콜은 목적에 맞는 프로그램의 구현에 따라서 정의하게 되는 약속에 지나지 않는다.
+*/
 #include <stdio.h>
 #include <winsock2.h>
 #include <stdlib.h>
@@ -25,8 +40,8 @@ void main()
 	WSADATA wsaData;
 	SOCKET hSocket;
 	char message[BUF_SIZE];
-	int strLen;
 	SOCKADDR_IN servAdr;
+	int str_len, recv_len, recv_cnt;
 
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) ErrorHandling("WSAStartup() error!");
 
@@ -50,9 +65,20 @@ void main()
 
 		if (!strcmp(message, "q\n") || !strcmp(message, "Q\n")) break;
 
-		send(hSocket, message, strlen(message), 0);
-		strLen = recv(hSocket, message, BUF_SIZE - 1, 0);
-		message[strLen] = 0;
+		str_len = send(hSocket, message, strlen(message), 0);
+		
+		recv_len = 0;
+		while (recv_len < str_len)
+		{
+			recv_cnt = recv(hSocket, message, BUF_SIZE - 1, 0);
+			if (recv_cnt == -1) ErrorHandling("recv() error!");
+			recv_len += recv_cnt;
+		}
+
+		/*
+			str_len = recv(hSocket, message, BUF_SIZE - 1, 0);
+		*/		
+		message[recv_len] = 0;
 		printf("Message from server: %s \n", message);
 	}
 	closesocket(hSocket);
