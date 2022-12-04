@@ -1,0 +1,7 @@
+﻿  B03_rain.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p08_array\B03_rain.c(9,1): warning C4305: '초기화 중': 'double'에서 'const float'(으)로 잘립니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p08_array\B03_rain.c(10,1): warning C4305: '초기화 중': 'double'에서 'const float'(으)로 잘립니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p08_array\B03_rain.c(11,1): warning C4305: '초기화 중': 'double'에서 'const float'(으)로 잘립니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p08_array\B03_rain.c(12,1): warning C4305: '초기화 중': 'double'에서 'const float'(으)로 잘립니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p08_array\B03_rain.c(13,1): warning C4305: '초기화 중': 'double'에서 'const float'(으)로 잘립니다.
+  p08_array.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p08_array.exe
