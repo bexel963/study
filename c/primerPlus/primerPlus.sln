@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p08_array", "p08_array\p08_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p09_string", "p09_string\p09_string.vcxproj", "{19DB0CEE-8540-4EAD-A77E-F2F73F40F5FD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P10_memory", "P10_memory\P10_memory.vcxproj", "{880B78CE-E852-44E1-B968-16D4F2875BC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{19DB0CEE-8540-4EAD-A77E-F2F73F40F5FD}.Release|x64.Build.0 = Release|x64
 		{19DB0CEE-8540-4EAD-A77E-F2F73F40F5FD}.Release|x86.ActiveCfg = Release|Win32
 		{19DB0CEE-8540-4EAD-A77E-F2F73F40F5FD}.Release|x86.Build.0 = Release|Win32
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Debug|x64.ActiveCfg = Debug|x64
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Debug|x64.Build.0 = Debug|x64
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Debug|x86.ActiveCfg = Debug|Win32
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Debug|x86.Build.0 = Debug|Win32
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Release|x64.ActiveCfg = Release|x64
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Release|x64.Build.0 = Release|x64
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Release|x86.ActiveCfg = Release|Win32
+		{880B78CE-E852-44E1-B968-16D4F2875BC6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

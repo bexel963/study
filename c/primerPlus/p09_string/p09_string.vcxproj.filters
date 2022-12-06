@@ -75,5 +75,32 @@
     <ClCompile Include="B19_strcmp.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="B20_strncmp.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B21_strcpy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B22_strcpy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B23_strncpy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B24_sprintf.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B25_strSort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B26_mod_str.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B27_atoi.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B28_strtol.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
