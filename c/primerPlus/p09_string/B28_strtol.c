@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "myString.h"
 #define LIM 30
 
 /*
@@ -20,7 +21,6 @@
 		: endptr은 포인터의 주소이다. (그 포인터는 입력한 수를 끝내는 문자, 즉 수가 아닌 부분의 첫 번째 문자의 주소이다.)
 		: base는 그 수를 표기할 진수의 기수다.
 */
-char* s_gets(char*, int);
 
 int main(void)
 {
@@ -53,21 +53,3 @@ int main(void)
 	return 0;
 }
 
-char* s_gets(char* st, int n)
-{
-	char* ret_val;
-	int i = 0;
-
-	ret_val = fgets(st, n, stdin);
-	if (ret_val)
-	{
-		while (st[i] != '\n' && st[i] != '\n')
-			i++;
-		if (st[i] == '\n')
-			st[i] = '\0';
-		else
-			while (getchar() != '\n')
-				continue;
-	}
-	return ret_val;
-}

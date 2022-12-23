@@ -1,6 +1,2 @@
-﻿  B24_sprintf.c
-C:\Users\LIM\Desktop\std\c\primerPlus\p09_string\B24_sprintf.c(21,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\LIM\Desktop\std\c\primerPlus\p09_string\B24_sprintf.c(22,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\LIM\Desktop\std\c\primerPlus\p09_string\B24_sprintf.c(9,7): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
-C:\Users\LIM\Desktop\std\c\primerPlus\p09_string\B24_sprintf.c(10,7): warning C4101: 'company' :참조되지 않은 지역 변수입니다.
+﻿  Q06.c
   p09_string.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p09_string.exe
