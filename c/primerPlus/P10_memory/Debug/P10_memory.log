@@ -1,5 +1,3 @@
-﻿  B07_manydice.c
-C:\Users\LIM\Desktop\std\c\primerPlus\P10_memory\B07_manydice.c(37,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\LIM\Desktop\std\c\primerPlus\P10_memory\B07_manydice.c(13,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\LIM\Desktop\std\c\primerPlus\P10_memory\B07_manydice.c(16,17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  B09_where.c
+C:\Users\LIM\Desktop\std\c\primerPlus\P10_memory\B09_where.c(18,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   P10_memory.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\P10_memory.exe

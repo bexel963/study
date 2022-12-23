@@ -29,14 +29,14 @@ int main(void)
 
 	puts("문자열을 입력하세요.");
 	fgets(words, STLEN, stdin);
-	printf("입력한 문자열 두 번 (puts(), 그리고 나서 fputs()): \n");
+	printf("\n입력한 문자열 두 번 (puts(), 그리고 나서 fputs()): \n");
 	
 	puts(words);
 	fputs(words, stdout);
 	
-	puts("다른 문자열을 입력하세요.");
+	puts("\n다른 문자열을 입력하세요.");
 	fgets(words, STLEN, stdin);
-	printf("입력한 문자열 두 번 (puts(), 그리고 나서 fputs()): \n");
+	printf("\n입력한 문자열 두 번 (puts(), 그리고 나서 fputs()): \n");
 	
 	puts(words);
 	fputs(words, stdout);
@@ -49,6 +49,6 @@ int main(void)
 
 		: strawberry shortcake 는 크기 한계를 초과하므로 fgets()는 첫 문자 13개를 읽어 배열에 strawberry sh\0 을 저장한다.
 		
-		: puts는 개행을 출력에 추가하고, fpust()는 추가하지 않는다.
+		: puts는 개행을 출력에 추가하고, fputs()는 추가하지 않는다.
 
 */

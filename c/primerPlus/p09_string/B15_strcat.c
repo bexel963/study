@@ -11,8 +11,8 @@ int main(void)
 	puts("네가 가장 좋아하는 꽃이 뭐냐?");
 	if (s_gets(flower, SIZE))
 	{
-		strcat(flower, addon);
-		puts(flower);
+		strcat(flower, addon);	// 두 번째 문자열이 덧붙은 첫 번째 문자열의 첫 번째 문자의 주소를 리턴한다.
+		puts(flower);			// addon이 변경되지 않는 동안 flower는 변경된다.
 		puts(addon);
 	}
 	else

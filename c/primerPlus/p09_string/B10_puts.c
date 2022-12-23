@@ -13,5 +13,7 @@ int main(void)
 	puts(&str1[5]);
 	puts(str2 + 4);
 
+	// puts()´Â ³Î ¹®ÀÚ¸¦ ¸¸³µÀ» ¶§ ¸ØÃá´Ù.
+
 	return 0;
 }

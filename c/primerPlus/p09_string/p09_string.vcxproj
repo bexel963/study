@@ -170,7 +170,7 @@
     <ClCompile Include="B09_scanf.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="B10_put_out.c">
+    <ClCompile Include="B10_puts.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="B11_nono.c">
@@ -224,7 +224,15 @@
     <ClCompile Include="B27_atoi.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="B28_strtol.c" />
+    <ClCompile Include="B28_strtol.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="B29_etc.c" />
+    <ClCompile Include="myString.c" />
+    <ClCompile Include="note.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

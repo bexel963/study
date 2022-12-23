@@ -51,6 +51,12 @@
     <ClCompile Include="B07_manydice.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="B08_malloc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B09_where.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="diceroll.h">

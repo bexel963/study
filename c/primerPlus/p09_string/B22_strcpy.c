@@ -11,7 +11,7 @@ int main(void)
 
 	puts(orig);
 	puts(copy);
-	ps = strcpy(copy + 7, orig);	// strcpy()는 첫 번째 전달인자의 값(문자의 주소)를 리턴한다.
+	ps = strcpy(copy + 7, orig);	// strcpy()는 첫 번째 전달인자의 값(문자의 주소)(copy+7)를 리턴한다.
 	puts(copy);						// strcpy()는 소스 문자열로부터 널 문자도 복사한다.
 	puts(ps);
 

@@ -45,7 +45,7 @@
     <ClCompile Include="B09_scanf.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="B10_put_out.c">
+    <ClCompile Include="B10_puts.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="B11_nono.c">
@@ -102,5 +102,19 @@
     <ClCompile Include="B28_strtol.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="note.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="myString.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="B29_etc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myString.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

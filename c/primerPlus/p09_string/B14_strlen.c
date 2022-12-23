@@ -15,6 +15,8 @@ int main(void)
 	return 0;
 }
 
+// 긴 문자열을 단축시키는 함수
+// 이 함수는 문자열을 변경하기 대문에 함수 머리 매개변수 string을 선언할 때 const를 사용하지 않는다.
 void fit(char* string, unsigned int size)
 {
 	if (strlen(string) > size)

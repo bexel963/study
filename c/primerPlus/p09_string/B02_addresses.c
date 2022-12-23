@@ -39,7 +39,7 @@ int main()
 	const char* pt = MSG;
 
 	printf("address of \"I'm special\": %p \n", "I'm special.");
-	printf("              address ar: %p \n", ar);	// 얘만 주소 다름.
+	printf("              address ar: %p \n", ar);	// 얘만 주소 다름. - 정적인 데이터에 사용된 메모리의 부분은 ar에 사용된 메모리 즉 동적메모리에 사용된 것과는 다른다.
 	printf("            a address pt: %p \n", pt);
 	printf("          address of MSG: %p \n", MSG);
 	printf("address of \"I'm special\": %p \n", "I'm special.");
