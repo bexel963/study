@@ -6,7 +6,7 @@ int main(void)
 	int ch;
 	FILE* fp;
 	unsigned long count = 0;
-	char* title = "test";
+	char* title = "test.txt";
 
 	if ((fp = fopen(title, "r")) == NULL)
 	{

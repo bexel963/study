@@ -8,7 +8,7 @@ static int rollem(int sides)	// 이 파일에서만 사용할 수 있다.
 {
 	int roll;
 
-	roll = rand() % 6 + 1;
+	roll = rand() % 6 + 1;	// rand()는 0부터 RAND_MAX 까지 범위의 정수를 만든다. (RAND_MAX는 stdlib.h에 정의되어있고, 일반적으로 INT_MAX와 같다.)
 	++roll_count;
 
 	return roll;

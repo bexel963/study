@@ -12,6 +12,8 @@ int main(void)
 	int* pi;
 	char* pcl;
 
+
+
 	pi = (int*)malloc(sizeof(int));
 	*pi = 35;
 	pcl = (char*)malloc(strlen("Dynamic String") + 1);

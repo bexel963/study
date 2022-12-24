@@ -11,8 +11,8 @@ int main(void)
 	long count, last;
 
 	puts("처리할 파일의 이름을 입력하시오:");
-	scanf("%80", file);
-	if ((fp = fopen(file, "rb")) == NULL)
+	scanf("%80s", file);
+	if ((fp = fopen(file, "r")) == NULL)
 	{
 		printf("%s 파일을 열 수 없다.\n", file);
 		exit(EXIT_FAILURE);

@@ -51,6 +51,7 @@
     <ProjectGuid>{cfcc878a-6be6-4409-bc51-f1acce242d92}</ProjectGuid>
     <RootNamespace>P04loop</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>p04_loop</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

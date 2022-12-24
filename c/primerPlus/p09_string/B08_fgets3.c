@@ -31,7 +31,7 @@ int main(void)
 	char words[STLEN];
 	int i;
 
-	puts("문자열을 입력하세요 (탈출하려면 빈 행): ");
+	fputs("문자열을 입력하세요 (탈출하려면 빈 행): ", stdout);
 	while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n')
 	{
 		i = 0;

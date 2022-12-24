@@ -8,7 +8,7 @@ int main(void)
 	FILE* fp;
 	char words[MAX];
 
-	if ((fp = fopen("wordy", "a+")) == NULL)
+	if ((fp = fopen("wordy.txt", "a+")) == NULL)
 	{
 		fprintf(stdout, "Cant't open \"wordy\" 파일을 열 수 없습니다.\n");
 		exit(EXIT_FAILURE);
@@ -19,7 +19,7 @@ int main(void)
 		fprintf(fp, "%s\n", words);
 
 	puts("파일 내용:");
-	rewind(fp);
+	rewind(fp);		// 파일 포인터를 파일의 시작으로 옮긴다.
 	while (fscanf(fp, "%s", words) == 1)
 		puts(words);
 	puts("종료!");
