@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p02_stringAndIOFormat", "p0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p03_opAndStatement", "p03_opAndStatement\p03_opAndStatement.vcxproj", "{40E9D7E2-5DC7-4C4E-A0AE-5CBD8C87D1EB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P04_loop", "P04_loop\P04_loop.vcxproj", "{CFCC878A-6BE6-4409-BC51-F1ACCE242D92}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p04_loop", "P04_loop\P04_loop.vcxproj", "{CFCC878A-6BE6-4409-BC51-F1ACCE242D92}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p05_control", "p05_control\p05_control.vcxproj", "{BCF6C2FD-D0A2-417F-975E-85D7612A9924}"
 EndProject
@@ -21,13 +21,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p08_array", "p08_array\p08_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p09_string", "p09_string\p09_string.vcxproj", "{19DB0CEE-8540-4EAD-A77E-F2F73F40F5FD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P10_memory", "P10_memory\P10_memory.vcxproj", "{880B78CE-E852-44E1-B968-16D4F2875BC6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p10_memory", "P10_memory\P10_memory.vcxproj", "{880B78CE-E852-44E1-B968-16D4F2875BC6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p11_file", "p11_file\p11_file.vcxproj", "{1941A630-A1E1-4316-B2FF-F33EB4DC59F6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p12_struct", "p12_struct\p12_struct.vcxproj", "{EC9D4555-B3DA-44EB-82A7-AE3C535FC97C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p13_preproc", "p13_preproc\p13_preproc.vcxproj", "{27444E54-B164-4396-B34D-CD0068E941C6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p14_adt", "p14_adt\p14_adt.vcxproj", "{02824964-1BF8-40C5-89B7-C3B0537F61FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,14 @@ Global
 		{27444E54-B164-4396-B34D-CD0068E941C6}.Release|x64.Build.0 = Release|x64
 		{27444E54-B164-4396-B34D-CD0068E941C6}.Release|x86.ActiveCfg = Release|Win32
 		{27444E54-B164-4396-B34D-CD0068E941C6}.Release|x86.Build.0 = Release|Win32
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Debug|x64.ActiveCfg = Debug|x64
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Debug|x64.Build.0 = Debug|x64
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Debug|x86.ActiveCfg = Debug|Win32
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Debug|x86.Build.0 = Debug|Win32
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Release|x64.ActiveCfg = Release|x64
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Release|x64.Build.0 = Release|x64
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Release|x86.ActiveCfg = Release|Win32
+		{02824964-1BF8-40C5-89B7-C3B0537F61FE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
