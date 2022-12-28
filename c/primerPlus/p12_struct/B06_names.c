@@ -9,7 +9,7 @@ struct namect {
 	int letters;
 };
 
-// 2. 포인터를 사용하지 않고 구조체를 다루는 형식
+// 2. 포인터를 사용하지 않고 구조체를 다루는 형식 -> 전달인자와 리턴값으로 구조체를 사용.
 struct namect getinfo(void);
 struct namect makeinfo(struct namect);
 void showinfo(struct namect);
@@ -36,7 +36,7 @@ struct namect getinfo(void)
 
 	return temp;
 }
-struct namect makeinfo(struct namect info)
+struct namect makeinfo(struct namect info)	// 새로운 구조체 info(복사본) 생성 후 인자로 넘어오는 구조체 person의 값들이 info에 복사 된다.
 {
 	info.letters = strlen(info.fname) + strlen(info.lname);
 

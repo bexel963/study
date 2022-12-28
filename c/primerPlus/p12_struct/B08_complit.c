@@ -2,6 +2,8 @@
 #define MAXTITL 41
 #define MAXAUTL 31
 
+// 복합리터럴과 구조체
+
 struct book {
 	char title[MAXTITL];
 	char author[MAXAUTL];

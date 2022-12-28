@@ -1,4 +1,5 @@
-﻿  B01_film.c
-C:\Users\LIM\Desktop\std\c\primerPlus\p14_adt\B01_film.c(31,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\LIM\Desktop\std\c\primerPlus\p14_adt\B01_film.c(33,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  B02_films.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p14_adt\B02_films.c(27,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p14_adt\B02_films.c(71,16): warning C4013: 'strchr'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p14_adt\B02_films.c(71,26): warning C4047: '=': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
   p14_adt.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p14_adt.exe

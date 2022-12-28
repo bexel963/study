@@ -15,7 +15,7 @@ struct names {
 	char last[LEN];
 };
 struct guy {
-	struct names handle;
+	struct names handle;	// 중첩된 구조체
 	char favfood[LEN];
 	char job[LEN];
 	float income;

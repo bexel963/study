@@ -25,7 +25,7 @@ int main(void)
 	{
 		puts("평가를 입력하시오(0점에서 10점까지):");
 		scanf("%d", &temp.rating);
-		while (getchar() != '\n');
+		while (getchar() != '\n')
 			continue;
 		if (AddItem(temp, &movies) == false)
 		{
@@ -37,7 +37,7 @@ int main(void)
 			puts("리스트가 가득 찼습니다.");
 			break;
 		}
-		pust("다음 영화 타이틀을 입력하시오(끝내려면 빈 라인): ");			
+		puts("다음 영화 타이틀을 입력하시오(끝내려면 빈 라인): ");			
 	}
 
 	// 출력
@@ -60,7 +60,7 @@ void showmovies(Item item)
 {
 	printf("영화제목: %s     평가: %d\n", item.title, item.rating);
 }
-void* s_gets(char* st, int n)
+char* s_gets(char* st, int n)
 {
 	char* ret_val;
 	char* find;
