@@ -1,11 +1,11 @@
-﻿  sQ01.c
-  sQ02.c
-  sQ03.c
-  sQ04.c
-  sQ05.c
-  sQ06.c
-  sQ07.c
-  sQ08.c
+﻿  Q01.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\Q01.c(13,10): warning C4476: 'printf' : 서식 지정자에 알 수 없는 형식 필드 문자 '\xeb'이(가) 있습니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\Q01.c(13,63): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\Q01.c(13,63): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 3개가 제공되었습니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\Q01.c(10,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  S01_praise0.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S01_praise0.c(9,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p02_stringAndIOFormat\S01_praise0.c(12,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   코드를 생성하고 있습니다...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: _main"int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p02_stringAndIOFormat.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
+S01_praise0.obj : error LNK2005: _main이(가) Q01.obj에 이미 정의되어 있습니다.
+C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p02_stringAndIOFormat.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.

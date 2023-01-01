@@ -1,8 +1,4 @@
-﻿  Q04.c
-  Q05.c
-  Q06.c
-  Q07.c
-  Q08.c
-  코드를 생성하고 있습니다...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: _main"int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p01.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
+﻿  Q02.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p01\Q02.c(9,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p01\Q02.c(13,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  p01.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p01.exe

@@ -1,12 +1,17 @@
-/*
-	double형 변수를 1.0/3.0으로 설정
-	float형 변수를 1.0/3.0으로 설정
+#include <stdio.h>
+#include <float.h>
 
-	그 결과를 각각 세 번씩 출력
-		
-		a. 소수점 아래 4자리까지 출력
-		b. 소수점 아래 12자리까지 출력
-		c. 소수점 아래 16자리까지 출력
+int main(void)
+{
+	double d;
+	float f;
+	
+	f = 1.0 / 3.0;
+	d = 1.0 / 3.0;
 
-	float.h를 포함시켜, FLT_DIG와 DBL_DIG의 값을 출력하고 출력된 1.0/3.0의 값들이 이들 값과 같은지 확인
-*/
+	printf("f[%.4f], d[%.4f]\n", f, d);
+	printf("f[%.12f], d[%.12f]\n", f, d);
+	printf("f[%d], d[%d]\n\n", FLT_DIG, DBL_DIG);
+
+	return 0;
+}

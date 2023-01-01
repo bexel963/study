@@ -1,9 +1,23 @@
-/*
-	주행한 거리는 마일 단위로 묻고, 소비한 휘발유의 양은 갤런 단위로 묻는다.
-	갤런당 마일 수를 계산하여 소수점 아래 1자리까지 출력
-	그 다음에, 1갤런은 약 3.785리터이고, 1마일은 약 1.609킬로미터라는 사실을 이용하여, 
-	갤런당 마일 수를 유럽 스타일인 100킬로미터당 리터 수로 변환하여 그 결과를 소수점 아래 1자리까지 출력
+#include <stdio.h>
+#define LITER 3.785
+#define KILO 1.609
 
-	(미국 스타일은 거리당 연료 소비량으로 측정하고, 유럽 스타일은 연료 소비량 거리로 측정한다...)
-	이 두 변환 계수를 위해 기호 상수(const 또는 #define을 사용)를 사용
-*/
+int main(void)
+{
+	float miles;
+	float gallon;
+	
+	printf("주행거리(마일): ");
+	scanf("%f", &miles);
+	getchar();
+	printf("소비한 휘발유의 양(갤런): ");
+	scanf("%f", &gallon);
+
+	printf("갤런당 마일 수: %.1f\n\n", miles / gallon);
+	
+	printf("%f / %f\n", (gallon * LITER), (miles * KILO * 100));
+	printf("100킬로미터당 리터 수: %.1f\n\n", (gallon * LITER) / (miles * KILO * 100));
+
+	return 0;
+
+}

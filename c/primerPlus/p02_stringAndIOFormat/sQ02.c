@@ -1,7 +1,20 @@
-/*
-	이름 요청하고 그 이름을 다음과 같은 포맷으로 출력
-	a. 큰 따옴표로 감싸서 출력
-	b. 20문자의 필드 너비에 필드 전체를 큰따옴표로 감싸서 출력
-	c. 20문자의 필드 너비에 왼쪽으로 정렬하여, 필드 전체를 큰따옴표로 감싸서 출력.
-	d. 이름보다 3문자가 더 넓은 필드 너비에 출력
-*/
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char name[30];
+	int width;
+
+	printf("이름 입력: ");
+	scanf("%s", name);
+	
+	width = strlen(name) + 3;
+
+	printf("\"%s\"\n", name);
+	printf("\"%20s\"\n", name);
+	printf("\"%-20s\"\n", name);
+	printf("\"%*s\"\n\n", width, name);
+
+	return 0;
+}

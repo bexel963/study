@@ -75,5 +75,8 @@
     <ClCompile Include="sQ08.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="S01_praise0.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

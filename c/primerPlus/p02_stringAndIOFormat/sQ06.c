@@ -1,12 +1,26 @@
-/*
-	이름 요청 -> 성 요청
+#include <stdio.h>
+#include <string.h>
 
-	입력된 성과 이름을 한 라인에 출력하고, 그 다음 라인에는 성과 이름을 구성하는 글자 수를,
-	다음과 같이, 성과 이름의 끝 글자에 맞추어 출력
+int main(void)
+{
+	char firstName[10];
+	char lastName[20];
+	int firstLength;
+	int lastLength;
 
-		Melissa Honeybee
-			  7		   8
+	printf("이름 입력: ");
+	scanf("%s", lastName);
+	printf("성 입력: ");
+	scanf("%s", firstName);
+	
+	firstLength = strlen(firstName);
+	lastLength = strlen(lastName);
+	
+	printf("%s %s\n", firstName, lastName);
+	printf("%*d %*d\n\n", firstLength, firstLength, lastLength, lastLength);
 
-		Melissa Honeybee
-		7		8
-*/
+	printf("%s %s\n", firstName, lastName);
+	printf("%d %*d\n\n", firstLength, lastLength-1, lastLength);
+
+	return 0;
+}

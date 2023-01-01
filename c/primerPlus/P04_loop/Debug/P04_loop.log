@@ -1,3 +1,2 @@
-﻿  B08_power.c
-C:\Users\LIM\Desktop\std\c\primerPlus\P04_loop\B08_power.c(10,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  P04_loop.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\P04_loop.exe
+﻿  Q18.c
+  P04_loop.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p04_loop.exe

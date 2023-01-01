@@ -4,7 +4,7 @@ int main(void)
 {
 	char ch;
 
-	while ((ch = getchar()) != '\n')
+	while ((ch = getchar()) != '#')
 		putchar(ch);
 
 	return 0;
