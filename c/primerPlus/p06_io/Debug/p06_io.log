@@ -1,2 +1,6 @@
-﻿  B00_echo.c
+﻿  Q08.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p06_io\Q08.c(23,10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p06_io\Q08.c(31,12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p06_io\Q08.c(40,12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p06_io\Q08.c(11,6): warning C4101: 'scan_result' :참조되지 않은 지역 변수입니다.
   p06_io.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p06_io.exe
