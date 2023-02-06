@@ -21,10 +21,10 @@
     <ClCompile Include="B01_manyBook.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="B02_friend.c">
+    <ClCompile Include="B02_friend_overlap.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="B03_friend.c">
+    <ClCompile Include="B03_friend_ptr.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="B04_funds.c">

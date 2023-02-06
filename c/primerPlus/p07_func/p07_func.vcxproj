@@ -190,7 +190,9 @@
     <ClCompile Include="Q08.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Q09.c" />
+    <ClCompile Include="Q09.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Q10.c" />
   </ItemGroup>
   <ItemGroup>

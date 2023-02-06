@@ -15,14 +15,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hello_server.c">
+    <ClCompile Include="01_hello_server.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="echo_server.c">
+    <ClCompile Include="03_cal_server.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cal_server.c">
+    <ClCompile Include="02_echo_server.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="error.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_udpEcho_server.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="05_half-close_server.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="02_echo_select_server.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="06_oob_recv_server.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="07_news_sender.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="08_chatServer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myError.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

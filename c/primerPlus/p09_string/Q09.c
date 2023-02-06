@@ -1,51 +1,44 @@
 #include <stdio.h>
 #include <string.h>
-#define LEN 100
-
-void reverse(char*, int);
+#define SIZE 20
+void reverse(char*);
 
 int main(void)
 {
-	char words[LEN];
-	char revers[LEN];
-	int n = 0;
+	char input[SIZE];
+	int idx;
 
-	fputs("문자열 입력(끝내려면 [enter]입력): ", stdout);
-	while (fgets(words, 10, stdin) != NULL && words[0] != '\n')
+	fputs("문자열 입력: ", stdout);
+
+	while (fgets(input, 10, stdin) != NULL && input[0] != '\n')
 	{
-		int i = 0;
-		while (words[i] != '\n' && words[i] != '\0')
+		idx = 0;
+		while (input[idx] != '\n' && input[idx] != '\0')
 		{
-			i++;
+			idx++;
 		}
-		if (words[i] == '\n')
-			words[i] = '\0';
+		if (input[idx] == '\n')
+			input[idx] = '\0';
 		else
 			while (getchar() != '\n')
 				continue;
-
-		fputs("입력한 문자열: ", stdout);
-		puts(words);
-
 		
-
-		fputs("뒤집은 문자열: ", stdout);
-		
-		reverse(words, n);
-
-		fputs("\n문자열 입력(끝내려면 [enter]입력): ", stdout);
+		reverse(input);
+		fputs("문자열 입력: ", stdout);
 	}
+
+	return 0;
 }
 
-void reverse(char* words, int n)
+void reverse(char* input)
 {
-	int length = strlen(words);
-	if (n >= length)
-	{
-		return;
-	}
+	int cnt = 1;
+	int length = strlen(input);
 	
-	reverse(words, n + 1);
-
-	putchar(words[n]);
+	while (cnt <= length)
+	{
+		putchar(input[length - cnt]);
+		cnt++;
+	}
+	putchar('\n');
 }

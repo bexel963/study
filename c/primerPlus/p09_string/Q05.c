@@ -1,43 +1,41 @@
 #include <stdio.h>
-#define LEN 100
+#include <string.h>
 
-char* search(char*, char);
+char* getCharacter(char*, char);
 
 int main(void)
 {
+	char* str = "abcdefghijklmnopqrstuvwxyz";
+	char search;
+	char* find;
 
-	char sentence[LEN] = "abcdefghiz klm";
-	char input;
-	char* result;
-
-	fputs("문자 하나 입력(끝내려면 [enter]): ", stdout);
-	while ((input = getchar()) != '\n')
+	printf("찾을 문자 하나 입력(끝내려면 [Enter]입력): ");
+	while ((search = getchar()) != '\n')
 	{
-		result = search(sentence, input);
-		if (result != NULL)		
-			printf("찾기 성공!! 찾은 문자부터 출력 합니다: %s", result);		
+		find = getCharacter(str, search);
+
+		if (!find)
+			puts("찾으려는 문자가 없습니다.");
 		else
-			puts("입력한 문자가 없습니다.");
+			printf("찾으려는 문자는 %c가 있습니다.\n", *find);
 
 		while (getchar() != '\n')
 			continue;
-
-		fputs("\n문자 하나 입력(끝내려면 [enter]): ", stdout);		
+		printf("찾을 문자 하나 입력(끝내려면 [Enter]입력): ");
 	}
-
 }
 
-char* search(char* str, char ch)
+char* getCharacter(const char* str, char search)
 {
-	int idx = 0;
+	char* ptr = str;
 
-	while (str[idx] != ch && str[idx] != '\0')
+	while (*ptr != '\0')
 	{
-		idx++;
+		if (*ptr == search)
+			return ptr;
+		ptr++;
 	}
-
-	if (str[idx] == ch)
-		return &str[idx];
-	else
-		return NULL;
+	
+	return NULL;
+	
 }

@@ -1,5 +1,2 @@
-﻿  inet_adrconv.c
-C:\Users\LIM\Desktop\std\c\nk\Etc\inet_adrconv.c(14,28): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-C:\Users\LIM\Desktop\std\c\nk\Etc\inet_adrconv.c(24,11): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-C:\Users\LIM\Desktop\std\c\nk\Etc\inet_adrconv.c(25,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Etc.vcxproj -> C:\Users\LIM\Desktop\std\c\nk\Debug\Etc.exe
+﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: _main"int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\LIM\Desktop\std\c\nk\Debug\Etc.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

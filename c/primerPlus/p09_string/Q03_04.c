@@ -1,39 +1,72 @@
 #include <stdio.h>
-#define LEN 80
+#define SIZE 20
+#define READ 10
 
-char* getword(char*, int);
+void getWord(char*);
+void getWord2(char*, int);
 
 int main(void)
 {
-	char input[LEN];
 
-	while (getword(input, 10) != NULL)
-		puts(input);
-	puts("Done.\n");
+	
+	char input[SIZE];
+	
+	getWord2(input, READ);
+	
+	printf("입력한 단어 중 첫 번째 단어: ");
+	puts(input);
 
 	return 0;
 }
-char* getword(char* str, int n)
-{
-	int ch;
-	char* orig = str;
-	int cnt = 0;
-	while ((ch = getchar()) != EOF && isspace(ch) && cnt++ < n-1)
-		continue;
-	if (ch == EOF)
-		return NULL;
-	else
-		*str++ = ch;
 
-	while ((ch = getchar()) != EOF && !isspace(ch) && cnt++ < n-1)
-		*str++ = ch;
-	*str = '\0';
-	if (ch == EOF)
-		return NULL;
-	else
+void getWord(char* input)
+{
+	char ch;
+	int cnt = 0;
+	
+	printf("단어 여러개 입력: ");
+	while ((ch = getchar()) != EOF)
 	{
-		while (ch != '\n')
-			ch = getchar();
-		return orig;
+		if (cnt == 0 && ch == ' ')
+			continue;
+		
+		if (ch == ' ' || ch == '\t' || ch == '\n')
+		{
+			input[cnt] = '\0';
+
+			while (getchar() != '\n')
+				continue;
+
+			break;
+		}
+			
+		input[cnt] = ch;
+		cnt++;		
+	}
+}
+
+void getWord2(char* input, int length)
+{
+	char ch;
+	int cnt = 0;
+
+	printf("단어 여러개 입력: ");
+	while ((ch = getchar()) != EOF)
+	{
+		if (cnt == 0 && ch == ' ')
+			continue;
+
+		if (ch == ' ' || ch == '\t' || ch == '\n' || cnt >= length)
+		{
+			input[cnt] = '\0';
+
+			while (getchar() != '\n')
+				continue;
+
+			break;
+		}
+
+		input[cnt] = ch;
+		cnt++;
 	}
 }

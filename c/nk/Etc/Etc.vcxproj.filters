@@ -15,14 +15,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Server\memo.c">
+    <ClCompile Include="..\Server\00_memo.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="endian_conv.c">
+    <ClCompile Include="01_endian_conv.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="inet_adrconv.c">
+    <ClCompile Include="02_inet_adrconv.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="error.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_gethostbyname.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_gethostbyaddr.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="05_socketOption.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="06_thread1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="07_thread2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="08_thread3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="09_SyncCS.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_SyncMutex.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_SyncSema.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12_SyncEvent.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Server\myError.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

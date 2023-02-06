@@ -1,46 +1,50 @@
 #include <stdio.h>
-#define LEN 100
+#define STLEN 20
 
-void deleteSpace(char*);
+char* removeSpace(char*, char*);
 
 int main(void)
 {
-	char sentence[LEN];
+	char input[STLEN];
+	char result[STLEN];
 
-	fputs("문장 입력(끝내려면 [enter]입력): ", stdout);
-	while (fgets(sentence, 10, stdin) != NULL && sentence[0] != '\n')
+	int cnt;
+
+	fputs("문자열 입력: ", stdout);
+	while (fgets(input, 10, stdin) != NULL && input[0] != '\n')
 	{
-		int i = 0;
-		while (sentence[i] != '\n' && sentence[i] != '\0')
-			i++;
-		if (sentence[i] == '\n')
-			sentence[i] = '\0';
+		cnt = 0;
+		while (input[cnt] != '\n' && input[cnt] != '\0')
+			cnt++;
+		if (input[cnt] == '\n')
+			input[cnt] = '\0';
 		else
 			while (getchar() != '\n')
 				continue;
 		
-		fputs("입력한 문장: ", stdout);
-		puts(sentence);
-				
-		fputs("스페이스 제거: ", stdout);
-		deleteSpace(sentence);
-
-		fputs("문장 입력(끝내려면 [enter]입력): ", stdout);
+		puts(removeSpace(result, input));
+		
+		fputs("문자열 입력: ", stdout);
 	}
-	puts("\n 종료!!");
+	return 0;
 }
 
-void deleteSpace(char* str)
+char* removeSpace(char* result, char* input)
 {
-	while (*str != '\0')
+	int cnt = 0;
+	char* tmp = result;
+	while (input[cnt] != '\0')
 	{
-		if (*str == ' ')
+		if (input[cnt] == ' ')
 		{
-			str++;
+			cnt++;
 			continue;
-		}			
-		putchar(*str);
-		str++;
+		}
+		*result = input[cnt];
+		result++;
+		cnt++;
 	}
-	puts("\n");
+	*result = '\0';
+
+	return tmp;
 }

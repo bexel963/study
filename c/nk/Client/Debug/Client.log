@@ -1,3 +1,8 @@
-﻿  echo_client.c
-C:\Users\LIM\Desktop\std\c\nk\Client\echo_client.c(45,28): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+﻿  08_charClient.c
+C:\Users\LIM\Desktop\std\c\nk\Client\08_charClient.c(25,8): warning C4013: 'Error'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\LIM\Desktop\std\c\nk\Client\08_charClient.c(26,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\nk\Client\08_charClient.c(61,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  error.c
+C:\Users\LIM\Desktop\std\c\nk\Client\error.c(8,6): warning C4013: 'exit'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  코드를 생성하고 있습니다...
   Client.vcxproj -> C:\Users\LIM\Desktop\std\c\nk\Debug\Client.exe

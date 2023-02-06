@@ -15,14 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hello_client.c">
+    <ClCompile Include="01_hello_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="echo_client.c">
+    <ClCompile Include="02_echo_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cal_client.c">
+    <ClCompile Include="03_cal_client.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="error.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_udpEcho_client.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="05_half-close_client.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Server\06_oob_send_client.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="07_news_receiver.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="08_charClient.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Server\myError.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

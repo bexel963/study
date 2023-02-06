@@ -35,7 +35,7 @@ void sum_rows(int ar[][COLS], int rows)
 		printf("%d«‡: º“∞Ë = %d\n", r, tot);
 	}
 }
-void sum_cols(int ar[][COLS], int rows)
+void sum_cols(int (*ar)[COLS], int rows)
 {
 	int r;
 	int c;
@@ -50,7 +50,7 @@ void sum_cols(int ar[][COLS], int rows)
 	}
 }
 
-int sum2d(int(*ar)[COLS], int rows)
+int sum2d(int (*ar)[COLS], int rows)
 {
 	int r;
 	int c;

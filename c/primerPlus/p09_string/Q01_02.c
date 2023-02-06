@@ -1,26 +1,55 @@
 #include <stdio.h>
-#define LEN 20
+#define SIZE 10
 
-void getWords(char*, int);
+void print(char*, int);
+void my_fgets(char*, int);
+void my_fgets2(char*, int);
+
 
 int main(void)
 {
-	char words[LEN];
+	char input[SIZE + 1];
 
-	fputs("문자들 입력: ", stdout);
-	getWords(words, 10);
-	
-	printf("입력한 문자들: %s\n", words);
+	fputs("문자열 입력: ", stdout);
+	//fgets(input, SIZE, stdin);
+	my_fgets2(input, SIZE);
+
+	puts(input);
+	//print(input, SIZE);
+
+	return 0;
 }
 
-void getWords(char* str, int n)
+void my_fgets(char* arr, int length)
 {
-	char ch = ' ';
 	int cnt = 0;
-	while (cnt < n &&(ch = getchar()) != '\n' && ch != ' ' && ch != '\t')
+	while (cnt < length)
 	{
-		*(str++) = ch;
+		arr[cnt] = getchar();
 		cnt++;
 	}
-	*str = '\0';
+	while (getchar() != '\n')
+		continue;
+}
+void my_fgets2(char* arr, int length)
+{
+	int cnt = 0;
+	while (cnt < length)
+	{
+		arr[cnt] = getchar();
+		if (arr[cnt] == '\n' || arr[cnt] == ' ' || arr[cnt] == '\t')
+		{
+			arr[cnt] = '\0';
+			break;
+		}
+		cnt++;
+	}
+	while (getchar() != '\n')
+		continue;
+}
+void print(char* arr, int length)
+{
+	for (int i = 0; i < length; i++)
+		putchar(arr[i]);
+	putchar('\n');
 }

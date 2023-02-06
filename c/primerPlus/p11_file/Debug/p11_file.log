@@ -1,7 +1,5 @@
-﻿  A01_note.c
-  A02_note.c
-  코드를 생성하고 있습니다...
-  B03_append.c
-C:\Users\LIM\Desktop\std\c\primerPlus\p11_file\B03_append.c(19,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\LIM\Desktop\std\c\primerPlus\p11_file\B03_append.c(34,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  B04_randbin.c
+C:\Users\LIM\Desktop\std\c\primerPlus\p11_file\B04_randbin.c(17,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p11_file\B04_randbin.c(25,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\LIM\Desktop\std\c\primerPlus\p11_file\B04_randbin.c(32,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   p11_file.vcxproj -> C:\Users\LIM\Desktop\std\c\primerPlus\Debug\p11_file.exe

@@ -1,57 +1,46 @@
 #include <stdio.h>
-#include <string.h>
-#define LEN 20
+#define SIZE 20
 
-int userInput(char*);
-void mystrncpy(char*, char*, int);
+char* mystrncpy(char*, char*, int);
 
 int main(void)
 {
-	char target[LEN];
-	char source[LEN];
+	char target[SIZE];
+	char source[SIZE];
+	int cnt;
 
-	while (userInput(source))
+	fputs("소스 문자열 입력(끝내려면 [Enter]입력): ", stdout);
+	while (fgets(source, 10, stdin) != NULL && source[0] != '\n')
 	{
-		fputs("source배열: ", stdout);
-		puts(source);
-		puts("source의 내용을 target으로 복사합니다.......\n");
-		mystrncpy(target, source, 10);
-		fputs("target배열: ", stdout);
-		puts(target);
-	}
+		cnt = 0;
+		while (source[cnt] != '\n' && source[cnt] != '\0')
+			cnt++;
+		if (source[cnt] == '\n')
+			source[cnt] == '\0';
+		else
+			while (getchar() != '\n')
+				continue;
 
+		fputs("\nsource배열에 저장된 문자열: ", stdout);
+		puts(source);
+			
+		fputs("target배열에 복사된 문자열: ", stdout);
+		if (mystrncpy(target, source, 5) != NULL)
+		{			
+			puts(target);
+		}
+		
+		fputs("\n소스 문자열 입력(끝내려면 [Enter]입력): ", stdout);
+	}
+	
 	return 0;
 }
 
-int userInput(char* input)
+char* mystrncpy(char* target, char* source, int length)
 {
-	int length = 0;
-	fputs("\n\n문자열 입력(끝내려면 [enter]입력): ", stdout);
-	fgets(input, LEN, stdin);		
-
-	if (input[0] == '\n')
-		return 0;
-
-	length = strlen(input);
-	printf("문자열 길이: %d\n", length);
-	if (length == LEN - 1)
-	{
-		while (getchar() != '\n')
-			continue;
-	}
-	else
-
-
-		input[length-1] = '\0';
+	for (int i = 0; i < length; i++)
+		target[i] = source[i];
+	target[length] = '\0';
 	
-	return 1;
-}
-
-void mystrncpy(char* target, char* source, int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		*(target++) = *(source + i);
-	}
-	*target = '\0';
+	return target;
 }
