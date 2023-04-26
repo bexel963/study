@@ -1,4 +1,0 @@
-﻿  Q02.cpp
-C:\Users\LIM\Desktop\std\cpp\cppApp\CH3\Q02.cpp(9,25): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\Users\LIM\Desktop\std\cpp\cppApp\CH3\Q02.cpp(10,23): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-  CH3.vcxproj -> C:\Users\LIM\Desktop\std\cpp\cppApp\Debug\CH3.exe

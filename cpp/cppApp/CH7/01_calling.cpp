@@ -17,3 +17,5 @@ void simple()
 	using namespace std;
 	cout << "여기는 simple() 함수입니다.\n";
 }
+
+

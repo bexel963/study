@@ -18,58 +18,82 @@
     <ClCompile Include="01_calling.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_protos.cpp">
+    <ClCompile Include="02_funcProtos.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03_twoarg.cpp">
+    <ClCompile Include="03_twoArg.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="04_lotto.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="05_arrfun1.cpp">
+    <ClCompile Include="05_arrFunc1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="06_arrfun2.cpp">
+    <ClCompile Include="06_arrFunc2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="07_arrfun3.cpp">
+    <ClCompile Include="07_arrFunc3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="08_arrfun4.cpp">
+    <ClCompile Include="08_arrFunc4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="09_strgfun.cpp">
+    <ClCompile Include="09_strArg.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10_strgback.cpp">
+    <ClCompile Include="10_strgReturn.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="11_traval.cpp">
+    <ClCompile Include="11_structFunc.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="12_strctfun.cpp">
+    <ClCompile Include="12_structOrigin.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="13_strctptr.cpp">
+    <ClCompile Include="13_structPointer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="14_topfive.cpp">
+    <ClCompile Include="14_stringClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="15_arrobj.cpp">
+    <ClCompile Include="15_arrayClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="16_recur.cpp">
+    <ClCompile Include="16_recursiveCall.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="17_ruler.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="18_fun_ptr.cpp">
+    <ClCompile Include="18_funcPointer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="19_arfupt.cpp">
+    <ClCompile Include="19_arrFuncPointer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q04.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q05.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q06.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q07.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q08.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
