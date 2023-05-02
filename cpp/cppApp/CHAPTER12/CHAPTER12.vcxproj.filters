@@ -29,7 +29,7 @@
     <ClCompile Include="01_stringbad.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01_vegnews.cpp">
+    <ClCompile Include="01_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="02_string1.cpp">

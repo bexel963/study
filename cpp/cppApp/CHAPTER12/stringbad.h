@@ -6,9 +6,9 @@
 class StringBad
 {
 private:
-	char* str;
+	char* str;		// 이 클래스 선언이 문자열 자체를 위해 기억공간을 대입하지 않는다는 뜻이다.
 	int len;
-	static int num_strings;
+	static int num_strings;		// 객체의 수
 public:
 	StringBad(const char*);
 	StringBad();

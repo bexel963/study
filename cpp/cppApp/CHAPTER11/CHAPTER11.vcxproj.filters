@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="16_stonewt.cpp">
+    <ClCompile Include="03_casting.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="16_stone.cpp">
+    <ClCompile Include="03_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="00_note.cpp">
