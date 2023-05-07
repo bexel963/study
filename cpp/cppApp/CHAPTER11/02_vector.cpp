@@ -120,8 +120,15 @@ namespace VECTOR
 	{
 		// 생성자는 두 개의 새로운 값들을 이용하여 이름이 없는 새로운 객체를 생성한다.
 		// 그리고 나서 그 객체의 복사본을 리턴한다.
-		return Vector(x + b.x, y + b.y);
+		return Vector(x + b.x, y + b.y);	// 임시 객체 생성...
 	}
+	/*
+		- 리턴되는 객체가 피호출 함수에 지역적이라면, 함수가 종료될 때 그 지역적인 객체가 파괴자를 호출하기 때문에,
+		  참조로 리턴하면 안 된다.
+		  호출하는 함수로 제어가 복귀할 때, 그 참조가 참조할 수 있는 객체가 더 이상 남아 있지 않기 때문이다.
+		  이러한 경우에는 참조가 아니라 객체를 리턴해야 한다.
+		  일반적으로 오버로딩 산술 연산자들이 이 범주에 속한다.
+	*/
 	Vector Vector::operator-(const Vector& b) const
 	{
 		return Vector(x - b.x, y - b.y);
@@ -153,6 +160,28 @@ namespace VECTOR
 
 		return os;
 	}
+
+	Vector Vector::max1(const Vector& v1, const Vector& v2)
+	{
+		if (v1.magVal() > v2.magVal())
+			return v1;
+		else
+			return v2;
+	}
+	const Vector& Vector::max2(const Vector& v1, const Vector& v2)
+	{
+		if (v1.magVal() > v2.magVal())
+			return v1;
+		else
+			return v2;
+	}
+	/*
+		- 객체를 리턴하는 것은 복사 생성자를 호출하지만, 참조를 리턴하는 것은 그렇지 않다.
+		  그래서 max2가 더 효율적이다.
+		- 러턴하는 참조는 호출하는 함수가 실행중일 때 존재하는 객체에 대한 참조여야 한다.
+				max(force1, force2)에서 매개변수 둘 다 호출하는 함수에서 정의된 객체이다. 그래서 이 요구사항에 부합된다.
+		- v1, v2 둘 다 const 참조로 선언되어 있다. 그래서 그와 부합되도록 리턴형이 const가 되어야 한다.
+	*/
 }
 
 /*
@@ -161,3 +190,5 @@ namespace VECTOR
 		2) 하나의 표기 형식으로 값을 대입하면, 다른 표기 형식에도 값이 자동으로 대입되는 클래스 함수를 만들 수 있다.
 	: 클래스는 이러한 변환을 내부적으로 처리함으로써, 어떤 수량을 다룰 때 표기 형식이 아니라 본질적인 의미에만 집중하면 되므로 편리하다.
 */
+
+

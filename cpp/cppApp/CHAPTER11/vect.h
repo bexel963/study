@@ -42,6 +42,9 @@ namespace VECTOR
 
 		friend Vector operator*(double n, const Vector& a);
 		friend std::ostream& operator<<(std::ostream& os, const Vector& v);
+
+		Vector max1(const Vector&, const Vector&);
+		const Vector& max2(const Vector&, const Vector&);
 	};
 }
 

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tabtenn0.h">
+    <ClInclude Include="parent.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="tabtenn1.h">
+    <ClInclude Include="child.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="brass.h">
@@ -32,16 +32,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_tabtenn0.cpp">
+    <ClCompile Include="01_parent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01_usett0.cpp">
+    <ClCompile Include="01_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_tabtenn1.cpp">
+    <ClCompile Include="02_child.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_usett1.cpp">
+    <ClCompile Include="02_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03_brass.cpp">

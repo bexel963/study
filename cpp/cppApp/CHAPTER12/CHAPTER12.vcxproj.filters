@@ -18,7 +18,7 @@
     <ClInclude Include="stringbad.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="string1.h">
+    <ClInclude Include="stringImproving.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="queue.h">
@@ -32,13 +32,13 @@
     <ClCompile Include="01_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_string1.cpp">
+    <ClCompile Include="02_stringImproving.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_sayings1.cpp">
+    <ClCompile Include="02_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03_sayings2.cpp">
+    <ClCompile Include="03_use_new.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="04_placenew1.cpp">
