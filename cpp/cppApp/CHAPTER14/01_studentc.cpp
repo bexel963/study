@@ -70,3 +70,7 @@ ostream& operator<<(ostream& os, const Student& stu)
 	stu.arr_out(os);	// scores를 위해 private 메서드 사용
 	return os;
 }
+
+/*
+	asdf
+*/
