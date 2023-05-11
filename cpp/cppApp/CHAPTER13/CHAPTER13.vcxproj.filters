@@ -45,7 +45,7 @@
     <ClCompile Include="05_dma.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="05_usedma.cpp">
+    <ClCompile Include="05_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
