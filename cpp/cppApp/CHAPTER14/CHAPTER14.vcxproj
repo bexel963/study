@@ -140,22 +140,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="stacktp.h" />
-    <ClInclude Include="studentc.h" />
-    <ClInclude Include="studenti.h" />
+    <ClInclude Include="composition.h" />
+    <ClInclude Include="privateInheritance.h" />
     <ClInclude Include="worker0.h" />
     <ClInclude Include="workermi.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_studentc.cpp">
+    <ClCompile Include="01_composition.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="01_use_stuc.cpp">
+    <ClCompile Include="01_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="02_studenti.cpp">
+    <ClCompile Include="02_privateInheritance.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="02_use_stui.cpp">
+    <ClCompile Include="02_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="03_worktest.cpp">
@@ -170,7 +170,9 @@
     <ClCompile Include="04_workmitest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="05_stacktem.cpp" />
+    <ClCompile Include="05_stacktem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

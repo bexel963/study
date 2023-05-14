@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="studentc.h">
+    <ClInclude Include="composition.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="studenti.h">
+    <ClInclude Include="privateInheritance.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="worker0.h">
@@ -32,16 +32,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_studentc.cpp">
+    <ClCompile Include="01_composition.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01_use_stuc.cpp">
+    <ClCompile Include="01_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_studenti.cpp">
+    <ClCompile Include="02_privateInheritance.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_use_stui.cpp">
+    <ClCompile Include="02_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03_worker0.cpp">
