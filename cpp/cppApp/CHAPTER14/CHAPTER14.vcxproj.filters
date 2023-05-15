@@ -21,13 +21,13 @@
     <ClInclude Include="privateInheritance.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="worker0.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="workermi.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="stacktp.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="afterMI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="beforeMI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,19 +44,19 @@
     <ClCompile Include="02_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03_worker0.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="03_worktest.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="04_workermi.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="04_workmitest.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="05_stacktem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_beforeMI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_use.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_afterMI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -142,8 +142,8 @@
     <ClInclude Include="stacktp.h" />
     <ClInclude Include="composition.h" />
     <ClInclude Include="privateInheritance.h" />
-    <ClInclude Include="worker0.h" />
-    <ClInclude Include="workermi.h" />
+    <ClInclude Include="beforeMI.h" />
+    <ClInclude Include="afterMI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_composition.cpp">
@@ -158,16 +158,16 @@
     <ClCompile Include="02_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="03_worktest.cpp">
+    <ClCompile Include="03_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="03_worker0.cpp">
+    <ClCompile Include="03_beforeMI.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="04_workermi.cpp">
+    <ClCompile Include="04_afterMI.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="04_workmitest.cpp">
+    <ClCompile Include="04_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="05_stacktem.cpp">
