@@ -139,7 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stacktp.h" />
+    <ClInclude Include="stackTemplate.h" />
+    <ClInclude Include="templateClass.h" />
     <ClInclude Include="composition.h" />
     <ClInclude Include="privateInheritance.h" />
     <ClInclude Include="beforeMI.h" />
@@ -170,9 +171,10 @@
     <ClCompile Include="04_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="05_stacktem.cpp">
+    <ClCompile Include="05_useTemplateClass.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="06_useStackTemplate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

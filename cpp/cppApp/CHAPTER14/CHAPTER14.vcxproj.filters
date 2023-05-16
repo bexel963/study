@@ -21,13 +21,16 @@
     <ClInclude Include="privateInheritance.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="stacktp.h">
+    <ClInclude Include="templateClass.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="afterMI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="beforeMI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stackTemplate.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,7 +47,7 @@
     <ClCompile Include="02_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="05_stacktem.cpp">
+    <ClCompile Include="05_useTemplateClass.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03_beforeMI.cpp">
@@ -57,6 +60,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="04_use.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="06_useStackTemplate.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
