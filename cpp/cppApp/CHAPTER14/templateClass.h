@@ -32,6 +32,7 @@
 #ifndef STACKTP_H_
 #define STACKTP_H_
 
+
 template <class Type>	// class 대신에 typename을 사용해도 된다.
 class Stack
 {
