@@ -74,5 +74,17 @@
     <ClCompile Include="08_multiDataTypArgu.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="09_templateMember.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_templateParam.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_templateFriend.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12_boundTemplateFriend.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
