@@ -21,12 +21,18 @@
     <ClCompile Include="01_use.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="02_innerClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="friendClass.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="friendClass2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="innerClass.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
