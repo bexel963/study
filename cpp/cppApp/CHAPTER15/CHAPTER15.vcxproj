@@ -172,7 +172,13 @@
     <ClCompile Include="07_use.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="08_unexpectedException.cpp" />
+    <ClCompile Include="08_unexpectedException.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="09_RTTI_dynamic_cast.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10_RTTI_type_info.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exceptionClassInheritance.h" />

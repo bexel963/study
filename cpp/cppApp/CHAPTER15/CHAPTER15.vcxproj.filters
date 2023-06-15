@@ -51,6 +51,12 @@
     <ClCompile Include="08_unexpectedException.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="09_RTTI_dynamic_cast.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_RTTI_type_info.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="friendClass.h">
